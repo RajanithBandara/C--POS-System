@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace C__POS_System
+namespace C__POS_System.src.apps
 {
-    public partial class Form1 : Form
+    public partial class testui : Form
     {
-        public Form1()
+        public testui()
         {
             InitializeComponent();
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello world");
         }
     }
 }
