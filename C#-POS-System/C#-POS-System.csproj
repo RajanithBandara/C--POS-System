@@ -54,12 +54,6 @@
     <Compile Include="src\apps\testui.Designer.cs">
       <DependentUpon>testui.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\dashboards\admin-panel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\dashboards\admin-panel.Designer.cs">
-      <DependentUpon>admin-panel.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\dbconnection.cs" />
     <Compile Include="src\RJButton.cs">
       <SubType>Component</SubType>
@@ -78,9 +72,6 @@
     </Compile>
     <EmbeddedResource Include="src\apps\testui.resx">
       <DependentUpon>testui.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\dashboards\admin-panel.resx">
-      <DependentUpon>admin-panel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
