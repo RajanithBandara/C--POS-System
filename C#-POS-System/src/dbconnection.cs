@@ -13,7 +13,7 @@ namespace WindowsAppProject.Apps
         public string ConnectionString { get; private set; }
         private dbconnection()
         {
-            ConnectionString = "WIll be provided in the future";
+            ConnectionString = "Will be provided in the future";
         }
     }
 
