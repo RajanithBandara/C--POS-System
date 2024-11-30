@@ -48,29 +48,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\apps\admin-dash-userctrl\registeruser.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="src\apps\admin-dash-userctrl\registeruser.Designer.cs">
-      <DependentUpon>registeruser.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\apps\testui.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="src\apps\testui.Designer.cs">
       <DependentUpon>testui.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\dashboards\admin-panel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\dashboards\admin-panel.Designer.cs">
-      <DependentUpon>admin-panel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\dashboards\maindashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\dashboards\maindashboard.Designer.cs">
-      <DependentUpon>maindashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="src\dbconnection.cs" />
     <Compile Include="src\RJButton.cs">
@@ -88,19 +70,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="src\apps\admin-dash-userctrl\registeruser.resx">
-      <DependentUpon>registeruser.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="src\apps\testui.resx">
       <DependentUpon>testui.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\dashboards\admin-panel.resx">
-      <DependentUpon>admin-panel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\dashboards\maindashboard.resx">
-      <DependentUpon>maindashboard.cs</DependentUpon>
-    </EmbeddedResource>
-
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
