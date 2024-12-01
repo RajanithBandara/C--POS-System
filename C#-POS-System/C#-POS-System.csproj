@@ -107,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\checklist.png" />
+    <Folder Include="src\dashboards\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
