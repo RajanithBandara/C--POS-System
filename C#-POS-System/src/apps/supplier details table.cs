@@ -16,5 +16,10 @@ namespace C__POS_System.src.apps
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
