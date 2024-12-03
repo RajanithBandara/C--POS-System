@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -54,11 +54,11 @@
     <Compile Include="src\apps\testui.Designer.cs">
       <DependentUpon>testui.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\dashboards\admin-panel.cs">
-      <SubType>Form</SubType>
+    <Compile Include="src\apps\UserControl1.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\dashboards\admin-panel.Designer.cs">
-      <DependentUpon>admin-panel.cs</DependentUpon>
+    <Compile Include="src\apps\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
     <Compile Include="src\dbconnection.cs" />
     <Compile Include="src\RJButton.cs">
@@ -75,12 +75,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="src\apps\testui.resx">
       <DependentUpon>testui.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\dashboards\admin-panel.resx">
-      <DependentUpon>admin-panel.cs</DependentUpon>
+    <EmbeddedResource Include="src\apps\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -94,6 +95,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist.png" />
+    <Folder Include="src\dashboards\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace C__POS_System.src.dashboards
+namespace C__POS_System.src.apps
 {
-    public partial class admin_panel : Form
+    public partial class UserControl1 : UserControl
     {
-        public admin_panel()
+        public UserControl1()
         {
             InitializeComponent();
-        }
-
-        private void rjButton1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
