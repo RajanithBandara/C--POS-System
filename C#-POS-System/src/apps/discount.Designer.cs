@@ -43,6 +43,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
+            this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             this.rjPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -231,5 +232,6 @@
         private CustomControls.RJControls.RJButton rjButton1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label5;
+        private System.DirectoryServices.DirectoryEntry directoryEntry1;
     }
 }
