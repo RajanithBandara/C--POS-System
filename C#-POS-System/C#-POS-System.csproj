@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -13,6 +14,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
+  
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
@@ -23,6 +25,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
@@ -32,6 +35,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,48 +50,33 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
+  
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
-    <Compile Include="src\apps\discount.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="src\apps\discount.cs" />
     <Compile Include="src\apps\discount.Designer.cs">
       <DependentUpon>discount.cs</DependentUpon>
-
-    <Compile Include="src\apps\supplier details table.cs">
-      <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="src\apps\supplier details table.cs" />
     <Compile Include="src\apps\supplier details table.Designer.cs">
       <DependentUpon>supplier details table.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\apps\Supplier details addition form.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="src\apps\Supplier details addition form.cs" />
     <Compile Include="src\apps\Supplier details addition form.Designer.cs">
       <DependentUpon>Supplier details addition form.cs</DependentUpon>
-
     </Compile>
-    <Compile Include="src\apps\testui.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="src\apps\testui.cs" />
     <Compile Include="src\apps\testui.Designer.cs">
       <DependentUpon>testui.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\apps\UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="src\apps\UserControl1.cs" />
     <Compile Include="src\apps\UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
     <Compile Include="src\dbconnection.cs" />
-    <Compile Include="src\RJButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="src\RJPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="src\RJButton.cs" />
+    <Compile Include="src\RJPanel.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -97,16 +86,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-
     <EmbeddedResource Include="src\apps\discount.resx">
       <DependentUpon>discount.cs</DependentUpon>
-
+    </EmbeddedResource>
     <EmbeddedResource Include="src\apps\supplier details table.resx">
       <DependentUpon>supplier details table.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\Supplier details addition form.resx">
       <DependentUpon>Supplier details addition form.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\testui.resx">
       <DependentUpon>testui.cs</DependentUpon>
@@ -124,6 +111,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Resources\add.png" />
@@ -131,8 +119,10 @@
     <None Include="Resources\box.png" />
     <None Include="Resources\checklist.png" />
   </ItemGroup>
+  
   <ItemGroup>
     <Folder Include="src\dashboards\" />
   </ItemGroup>
+  
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
