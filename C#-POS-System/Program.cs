@@ -1,4 +1,5 @@
 ﻿using C__POS_System.src.apps;
+using CSharp_POS_System.src.apps.dashboards;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace C__POS_System
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new testui());
+            Application.Run(new inventorydashboard());
 
 
         }
