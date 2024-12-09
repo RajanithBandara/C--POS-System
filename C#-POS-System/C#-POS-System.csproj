@@ -55,12 +55,6 @@
     <Compile Include="src\apps\dashboards\inventorydashboard.Designer.cs">
       <DependentUpon>inventorydashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\apps\discount.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="src\apps\discount.Designer.cs">
-      <DependentUpon>discount.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\apps\discountadd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,9 +109,6 @@
     </Compile>
     <EmbeddedResource Include="src\apps\dashboards\inventorydashboard.resx">
       <DependentUpon>inventorydashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\apps\discount.resx">
-      <DependentUpon>discount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\discountadd.resx">
       <DependentUpon>discountadd.cs</DependentUpon>
