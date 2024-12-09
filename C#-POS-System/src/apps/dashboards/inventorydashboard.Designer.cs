@@ -37,7 +37,7 @@
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(398, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1831, 1256);
+            this.panel1.Size = new System.Drawing.Size(1447, 975);
             this.panel1.TabIndex = 1;
             // 
             // rjButton1
@@ -62,7 +62,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2241, 1280);
+            this.ClientSize = new System.Drawing.Size(1857, 999);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.rjButton1);
             this.Name = "inventorydashboard";

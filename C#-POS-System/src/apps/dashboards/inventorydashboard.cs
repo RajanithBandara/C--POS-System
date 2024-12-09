@@ -21,11 +21,9 @@ namespace CSharp_POS_System.src.apps.dashboards
 
         private void ConfigureFullScreenMode()
         {
-            this.WindowState = FormWindowState.Maximized;
-
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
     }
 }
