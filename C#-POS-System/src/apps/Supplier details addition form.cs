@@ -16,5 +16,14 @@ namespace C__POS_System.src.apps
         {
             InitializeComponent();
         }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = string.Empty;
+            textBox2.Text = string.Empty;
+            textBox3.Text = string.Empty;
+            textBox4.Text = string.Empty;
+            textBox5.Text = string.Empty;
+        }
     }
 }
