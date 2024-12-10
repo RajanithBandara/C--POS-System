@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.rjPanel1 = new RoundedPanelClass.RJPanel();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
-            this.label6 = new System.Windows.Forms.Label();
             this.rjPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +70,17 @@
             this.rjPanel1.Name = "rjPanel1";
             this.rjPanel1.Size = new System.Drawing.Size(883, 723);
             this.rjPanel1.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(289, 57);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(305, 36);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Supplier Detail Form";
             // 
             // textBox5
             // 
@@ -211,17 +222,6 @@
             this.rjButton1.Text = "Submit";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(289, 57);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(305, 36);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Supplier Detail Form";
             // 
             // Supplier_details_addition_form
             // 
