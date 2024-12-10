@@ -46,7 +46,7 @@
             // 
             // rjPanel1
             // 
-            this.rjPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.rjPanel1.BackColor = System.Drawing.Color.DarkGray;
             this.rjPanel1.BorderRadius = 30;
             this.rjPanel1.Controls.Add(this.textBox5);
             this.rjPanel1.Controls.Add(this.textBox4);
@@ -63,100 +63,106 @@
             this.rjPanel1.ForeColor = System.Drawing.Color.White;
             this.rjPanel1.GradientAngle = 90F;
             this.rjPanel1.GradientBottomColor = System.Drawing.Color.DarkGray;
-            this.rjPanel1.GradientTopColor = System.Drawing.Color.Green;
-            this.rjPanel1.Location = new System.Drawing.Point(30, 105);
+            this.rjPanel1.GradientTopColor = System.Drawing.Color.DarkGray;
+            this.rjPanel1.Location = new System.Drawing.Point(34, 131);
+            this.rjPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rjPanel1.Name = "rjPanel1";
-            this.rjPanel1.Size = new System.Drawing.Size(883, 460);
+            this.rjPanel1.Size = new System.Drawing.Size(993, 575);
             this.rjPanel1.TabIndex = 0;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(309, 176);
+            this.textBox5.Location = new System.Drawing.Point(348, 220);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(284, 22);
+            this.textBox5.Size = new System.Drawing.Size(319, 26);
             this.textBox5.TabIndex = 11;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(309, 216);
+            this.textBox4.Location = new System.Drawing.Point(348, 270);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(284, 22);
+            this.textBox4.Size = new System.Drawing.Size(319, 26);
             this.textBox4.TabIndex = 10;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(309, 256);
+            this.textBox3.Location = new System.Drawing.Point(348, 320);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(284, 22);
+            this.textBox3.Size = new System.Drawing.Size(319, 26);
             this.textBox3.TabIndex = 9;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(309, 296);
+            this.textBox2.Location = new System.Drawing.Point(348, 370);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(284, 22);
+            this.textBox2.Size = new System.Drawing.Size(319, 26);
             this.textBox2.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Snow;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(150, 222);
+            this.label5.Location = new System.Drawing.Point(169, 278);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 16);
+            this.label5.Size = new System.Drawing.Size(87, 20);
             this.label5.TabIndex = 7;
             this.label5.Text = "Contact no";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Snow;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(150, 259);
+            this.label4.Location = new System.Drawing.Point(169, 324);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 16);
+            this.label4.Size = new System.Drawing.Size(48, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Email";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(150, 299);
+            this.label3.Location = new System.Drawing.Point(169, 374);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 16);
+            this.label3.Size = new System.Drawing.Size(114, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Postal address";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(150, 182);
+            this.label2.Location = new System.Drawing.Point(169, 228);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 16);
+            this.label2.Size = new System.Drawing.Size(111, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Supplier name";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(150, 138);
+            this.label1.Location = new System.Drawing.Point(169, 172);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.Size = new System.Drawing.Size(88, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Supplier ID";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(309, 132);
+            this.textBox1.Location = new System.Drawing.Point(348, 165);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(284, 22);
+            this.textBox1.Size = new System.Drawing.Size(319, 26);
             this.textBox1.TabIndex = 2;
             // 
             // rjButton2
@@ -165,13 +171,14 @@
             this.rjButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.rjButton2.BorderColor = System.Drawing.Color.Black;
             this.rjButton2.BorderRadius = 5;
-            this.rjButton2.BorderSize = 1;
+            this.rjButton2.BorderSize = 0;
             this.rjButton2.FlatAppearance.BorderSize = 0;
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(475, 365);
+            this.rjButton2.Location = new System.Drawing.Point(534, 456);
+            this.rjButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(150, 40);
+            this.rjButton2.Size = new System.Drawing.Size(169, 50);
             this.rjButton2.TabIndex = 1;
             this.rjButton2.Text = "Clear";
             this.rjButton2.TextColor = System.Drawing.Color.White;
@@ -183,13 +190,14 @@
             this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.rjButton1.BorderColor = System.Drawing.Color.Black;
             this.rjButton1.BorderRadius = 5;
-            this.rjButton1.BorderSize = 1;
+            this.rjButton1.BorderSize = 0;
             this.rjButton1.FlatAppearance.BorderSize = 0;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(645, 365);
+            this.rjButton1.Location = new System.Drawing.Point(726, 456);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(150, 40);
+            this.rjButton1.Size = new System.Drawing.Size(169, 50);
             this.rjButton1.TabIndex = 0;
             this.rjButton1.Text = "Submit";
             this.rjButton1.TextColor = System.Drawing.Color.White;
@@ -197,11 +205,12 @@
             // 
             // Supplier_details_addition_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.rjPanel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Supplier_details_addition_form";
-            this.Size = new System.Drawing.Size(955, 596);
+            this.Size = new System.Drawing.Size(1074, 745);
             this.rjPanel1.ResumeLayout(false);
             this.rjPanel1.PerformLayout();
             this.ResumeLayout(false);
