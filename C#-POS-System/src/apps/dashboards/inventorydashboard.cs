@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharp_POS_System.src.apps.inventorydash_userctrl;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +25,13 @@ namespace CSharp_POS_System.src.apps.dashboards
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            inventoryadd inventoryadd = new inventoryadd();
+            panel1.Controls.Clear();
+            usercontroladd.addusercontrol(inventoryadd, panel1);
         }
     }
 }
