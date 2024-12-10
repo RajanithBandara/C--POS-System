@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Krypton.Toolkit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Krypton.Toolkit;
 
 namespace C__POS_System.src.apps
 {
@@ -15,26 +17,25 @@ namespace C__POS_System.src.apps
         public supplier_details_table()
         {
             InitializeComponent();
-            ConfigureDataGridView();
+            ConfigureKryptonDataGridView();
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void ConfigureDataGridView()
+        private void ConfigureKryptonDataGridView()
         {
-            dataGridView1.Columns.Add("Column1", "Name");
-            dataGridView1.Columns.Add("Column2", "Age");
-            dataGridView1.Columns.Add("Column3", "Country");
 
-            dataGridView1.Rows.Add("John", "30", "USA");
-            dataGridView1.Rows.Add("Anna", "25", "Canada");
-            dataGridView1.Rows.Add("Mike", "35", "UK");
+            kryptonDataGridView1.Columns.Add("Column1", "Name");
+            kryptonDataGridView1.Columns.Add("Column2", "Age");
+            kryptonDataGridView1.Columns.Add("Column3", "Country");
 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.AllowUserToAddRows = false;
+            kryptonDataGridView1.Rows.Add("John", "30", "USA");
+            kryptonDataGridView1.Rows.Add("Anna", "25", "Canada");
+            kryptonDataGridView1.Rows.Add("Mike", "35", "UK");
+
         }
-    }
+
+}
 }

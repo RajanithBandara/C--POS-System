@@ -28,35 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.rjPanel1 = new RoundedPanelClass.RJPanel();
+            this.kryptonDataGridView1 = new Krypton.Toolkit.KryptonDataGridView();
+            this.rjPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // rjPanel1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(176, 183);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1085, 505);
-            this.dataGridView1.TabIndex = 0;
+            this.rjPanel1.BackColor = System.Drawing.Color.DarkGray;
+            this.rjPanel1.BorderRadius = 30;
+            this.rjPanel1.Controls.Add(this.kryptonDataGridView1);
+            this.rjPanel1.ForeColor = System.Drawing.Color.White;
+            this.rjPanel1.GradientAngle = 90F;
+            this.rjPanel1.GradientBottomColor = System.Drawing.Color.DarkGray;
+            this.rjPanel1.GradientTopColor = System.Drawing.Color.DarkGray;
+            this.rjPanel1.Location = new System.Drawing.Point(173, 120);
+            this.rjPanel1.Name = "rjPanel1";
+            this.rjPanel1.Size = new System.Drawing.Size(1129, 606);
+            this.rjPanel1.TabIndex = 0;
+            // 
+            // kryptonDataGridView1
+            // 
+            this.kryptonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.kryptonDataGridView1.ColumnHeadersHeight = 51;
+            this.kryptonDataGridView1.Location = new System.Drawing.Point(208, 107);
+            this.kryptonDataGridView1.Name = "kryptonDataGridView1";
+            this.kryptonDataGridView1.RowHeadersWidth = 62;
+            this.kryptonDataGridView1.RowTemplate.Height = 28;
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(634, 356);
+            this.kryptonDataGridView1.TabIndex = 0;
             // 
             // supplier_details_table
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.rjPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "supplier_details_table";
             this.Size = new System.Drawing.Size(1492, 975);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.rjPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private RoundedPanelClass.RJPanel rjPanel1;
+        private Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
     }
 }
