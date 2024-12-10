@@ -16,5 +16,10 @@ namespace CSharp_POS_System.src.apps.inventorydash_userctrl
         {
             InitializeComponent();
         }
+
+        private void inventoryadd_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
