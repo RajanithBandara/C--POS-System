@@ -74,5 +74,10 @@ namespace CSharp_POS_System.src.apps.inventorydash_userctrl
             textBox11.Text = string.Empty;
             comboBox1.SelectedIndex = -1;
         }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

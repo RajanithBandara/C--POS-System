@@ -1,4 +1,5 @@
-﻿using CSharp_POS_System.src.apps.inventorydash_userctrl;
+﻿using C__POS_System.src.apps;
+using CSharp_POS_System.src.apps.inventorydash_userctrl;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,6 +33,13 @@ namespace CSharp_POS_System.src.apps.dashboards
             inventoryadd inventoryadd = new inventoryadd();
             panel1.Controls.Clear();
             usercontroladd.addusercontrol(inventoryadd, panel1);
+        }
+
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+            supplier_details_table supplierdet = new supplier_details_table();
+            panel1.Controls.Clear();
+            usercontroladd.addusercontrol(supplierdet, panel1);
         }
     }
 }
