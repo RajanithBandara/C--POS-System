@@ -90,9 +90,10 @@
             this.rjPanel1.GradientAngle = 90F;
             this.rjPanel1.GradientBottomColor = System.Drawing.Color.DarkGray;
             this.rjPanel1.GradientTopColor = System.Drawing.Color.DarkGray;
-            this.rjPanel1.Location = new System.Drawing.Point(221, 28);
+            this.rjPanel1.Location = new System.Drawing.Point(249, 35);
+            this.rjPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rjPanel1.Name = "rjPanel1";
-            this.rjPanel1.Size = new System.Drawing.Size(883, 723);
+            this.rjPanel1.Size = new System.Drawing.Size(993, 904);
             this.rjPanel1.TabIndex = 0;
             // 
             // comboBox1
@@ -100,10 +101,10 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(403, 194);
+            this.comboBox1.Location = new System.Drawing.Point(453, 242);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(296, 33);
+            this.comboBox1.Size = new System.Drawing.Size(332, 37);
             this.comboBox1.TabIndex = 25;
             // 
             // rjButton2
@@ -117,9 +118,10 @@
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(461, 666);
+            this.rjButton2.Location = new System.Drawing.Point(519, 832);
+            this.rjButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(150, 40);
+            this.rjButton2.Size = new System.Drawing.Size(169, 50);
             this.rjButton2.TabIndex = 24;
             this.rjButton2.Text = "Clear";
             this.rjButton2.TextColor = System.Drawing.Color.White;
@@ -137,92 +139,104 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(271, 666);
+            this.rjButton1.Location = new System.Drawing.Point(305, 832);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(150, 40);
+            this.rjButton1.Size = new System.Drawing.Size(169, 50);
             this.rjButton1.TabIndex = 23;
             this.rjButton1.Text = "Submit";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // textBox11
             // 
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox11.Location = new System.Drawing.Point(403, 605);
+            this.textBox11.Location = new System.Drawing.Point(453, 756);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(296, 30);
+            this.textBox11.Size = new System.Drawing.Size(332, 35);
             this.textBox11.TabIndex = 22;
             // 
             // textBox10
             // 
             this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox10.Location = new System.Drawing.Point(403, 554);
+            this.textBox10.Location = new System.Drawing.Point(453, 692);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(296, 30);
+            this.textBox10.Size = new System.Drawing.Size(332, 35);
             this.textBox10.TabIndex = 21;
             // 
             // textBox9
             // 
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox9.Location = new System.Drawing.Point(403, 503);
+            this.textBox9.Location = new System.Drawing.Point(453, 629);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(296, 30);
+            this.textBox9.Size = new System.Drawing.Size(332, 35);
             this.textBox9.TabIndex = 20;
             // 
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox8.Location = new System.Drawing.Point(403, 452);
+            this.textBox8.Location = new System.Drawing.Point(453, 565);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(296, 30);
+            this.textBox8.Size = new System.Drawing.Size(332, 35);
             this.textBox8.TabIndex = 19;
             // 
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox7.Location = new System.Drawing.Point(403, 401);
+            this.textBox7.Location = new System.Drawing.Point(453, 501);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(296, 30);
+            this.textBox7.Size = new System.Drawing.Size(332, 35);
             this.textBox7.TabIndex = 18;
             // 
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox6.Location = new System.Drawing.Point(403, 350);
+            this.textBox6.Location = new System.Drawing.Point(453, 438);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(296, 30);
+            this.textBox6.Size = new System.Drawing.Size(332, 35);
             this.textBox6.TabIndex = 17;
             // 
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox5.Location = new System.Drawing.Point(403, 299);
+            this.textBox5.Location = new System.Drawing.Point(453, 374);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(296, 30);
+            this.textBox5.Size = new System.Drawing.Size(332, 35);
             this.textBox5.TabIndex = 16;
             // 
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.Location = new System.Drawing.Point(403, 248);
+            this.textBox4.Location = new System.Drawing.Point(453, 310);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(296, 30);
+            this.textBox4.Size = new System.Drawing.Size(332, 35);
             this.textBox4.TabIndex = 15;
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(403, 143);
+            this.textBox2.Location = new System.Drawing.Point(453, 179);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(296, 30);
+            this.textBox2.Size = new System.Drawing.Size(332, 35);
             this.textBox2.TabIndex = 13;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(403, 92);
+            this.textBox1.Location = new System.Drawing.Point(453, 115);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(296, 30);
+            this.textBox1.Size = new System.Drawing.Size(332, 35);
             this.textBox1.TabIndex = 12;
             // 
             // label12
@@ -230,9 +244,9 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(183, 607);
+            this.label12.Location = new System.Drawing.Point(206, 759);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(195, 25);
+            this.label12.Size = new System.Drawing.Size(235, 29);
             this.label12.TabIndex = 11;
             this.label12.Text = "Damaged Products";
             // 
@@ -241,9 +255,9 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(183, 556);
+            this.label11.Location = new System.Drawing.Point(206, 695);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(131, 25);
+            this.label11.Size = new System.Drawing.Size(158, 29);
             this.label11.TabIndex = 10;
             this.label11.Text = "Brand Name";
             // 
@@ -252,9 +266,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(183, 505);
+            this.label10.Location = new System.Drawing.Point(206, 631);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(119, 25);
+            this.label10.Size = new System.Drawing.Size(144, 29);
             this.label10.TabIndex = 9;
             this.label10.Text = "Supplier ID";
             // 
@@ -263,9 +277,9 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(183, 454);
+            this.label9.Location = new System.Drawing.Point(206, 568);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(148, 25);
+            this.label9.Size = new System.Drawing.Size(179, 29);
             this.label9.TabIndex = 8;
             this.label9.Text = "Supplied Date";
             // 
@@ -274,9 +288,9 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(183, 403);
+            this.label8.Location = new System.Drawing.Point(206, 504);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 25);
+            this.label8.Size = new System.Drawing.Size(146, 29);
             this.label8.TabIndex = 7;
             this.label8.Text = "Expiry Date";
             // 
@@ -285,9 +299,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(183, 352);
+            this.label7.Location = new System.Drawing.Point(206, 440);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 25);
+            this.label7.Size = new System.Drawing.Size(127, 29);
             this.label7.TabIndex = 6;
             this.label7.Text = "Unit Price";
             // 
@@ -296,9 +310,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(183, 301);
+            this.label6.Location = new System.Drawing.Point(206, 376);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(154, 25);
+            this.label6.Size = new System.Drawing.Size(180, 29);
             this.label6.TabIndex = 5;
             this.label6.Text = "Batch Quantity";
             // 
@@ -307,9 +321,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(183, 250);
+            this.label5.Location = new System.Drawing.Point(206, 312);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 25);
+            this.label5.Size = new System.Drawing.Size(178, 29);
             this.label5.TabIndex = 4;
             this.label5.Text = "Batch Number";
             // 
@@ -318,9 +332,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(183, 196);
+            this.label4.Location = new System.Drawing.Point(206, 245);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(187, 25);
+            this.label4.Size = new System.Drawing.Size(224, 29);
             this.label4.TabIndex = 3;
             this.label4.Text = "Product Catergory";
             // 
@@ -329,9 +343,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(183, 145);
+            this.label3.Location = new System.Drawing.Point(206, 181);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 25);
+            this.label3.Size = new System.Drawing.Size(179, 29);
             this.label3.TabIndex = 2;
             this.label3.Text = "Product Name";
             // 
@@ -340,9 +354,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(183, 94);
+            this.label2.Location = new System.Drawing.Point(206, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 25);
+            this.label2.Size = new System.Drawing.Size(135, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Product ID";
             // 
@@ -351,20 +365,21 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(272, 29);
+            this.label1.Location = new System.Drawing.Point(306, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(339, 36);
+            this.label1.Size = new System.Drawing.Size(405, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Inventory Update Form";
             // 
             // inventoryadd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.Controls.Add(this.rjPanel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "inventoryadd";
-            this.Size = new System.Drawing.Size(1326, 780);
+            this.Size = new System.Drawing.Size(1492, 975);
             this.Load += new System.EventHandler(this.inventoryadd_Load);
             this.rjPanel1.ResumeLayout(false);
             this.rjPanel1.PerformLayout();
