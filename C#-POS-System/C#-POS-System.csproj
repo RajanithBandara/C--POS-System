@@ -55,6 +55,12 @@
     <Compile Include="src\apps\dashboards\inventorydashboard.Designer.cs">
       <DependentUpon>inventorydashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\apps\dashboards\maindashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\apps\dashboards\maindashboard.Designer.cs">
+      <DependentUpon>maindashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\apps\discountadd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </Compile>
     <EmbeddedResource Include="src\apps\dashboards\inventorydashboard.resx">
       <DependentUpon>inventorydashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\dashboards\maindashboard.resx">
+      <DependentUpon>maindashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\discountadd.resx">
       <DependentUpon>discountadd.cs</DependentUpon>
