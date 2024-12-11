@@ -43,20 +43,22 @@
             this.rjPanel1.GradientAngle = 90F;
             this.rjPanel1.GradientBottomColor = System.Drawing.Color.DarkGray;
             this.rjPanel1.GradientTopColor = System.Drawing.Color.DarkGray;
-            this.rjPanel1.Location = new System.Drawing.Point(173, 120);
+            this.rjPanel1.Location = new System.Drawing.Point(14, 18);
             this.rjPanel1.Name = "rjPanel1";
-            this.rjPanel1.Size = new System.Drawing.Size(1129, 606);
+            this.rjPanel1.Size = new System.Drawing.Size(1459, 822);
             this.rjPanel1.TabIndex = 0;
             // 
             // kryptonDataGridView1
             // 
             this.kryptonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridView1.ColumnHeadersHeight = 51;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(208, 107);
+            this.kryptonDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonDataGridView1.Location = new System.Drawing.Point(0, 0);
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
+            this.kryptonDataGridView1.ReadOnly = true;
             this.kryptonDataGridView1.RowHeadersWidth = 62;
             this.kryptonDataGridView1.RowTemplate.Height = 28;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(634, 356);
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(1459, 822);
             this.kryptonDataGridView1.TabIndex = 0;
             // 
             // supplier_details_table
