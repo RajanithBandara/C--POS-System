@@ -52,11 +52,12 @@
             // 
             this.kryptonDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kryptonDataGridView1.ColumnHeadersHeight = 51;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(208, 107);
+            this.kryptonDataGridView1.Location = new System.Drawing.Point(55, 22);
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
+            this.kryptonDataGridView1.ReadOnly = true;
             this.kryptonDataGridView1.RowHeadersWidth = 62;
             this.kryptonDataGridView1.RowTemplate.Height = 28;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(634, 356);
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(1025, 561);
             this.kryptonDataGridView1.TabIndex = 0;
             // 
             // supplier_details_table
