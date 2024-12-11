@@ -95,6 +95,18 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\apps\Admin panel uctrl\UserAddition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\apps\Admin panel uctrl\UserAddition.Designer.cs">
+      <DependentUpon>UserAddition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\apps\dashboards\Admin panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\apps\dashboards\Admin panel.Designer.cs">
+      <DependentUpon>Admin panel.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\apps\dashboards\inventorydashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +172,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="src\apps\Admin panel uctrl\UserAddition.resx">
+      <DependentUpon>UserAddition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\dashboards\Admin panel.resx">
+      <DependentUpon>Admin panel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\apps\dashboards\inventorydashboard.resx">
       <DependentUpon>inventorydashboard.cs</DependentUpon>
     </EmbeddedResource>
