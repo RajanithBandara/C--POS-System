@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -34,7 +35,9 @@ namespace CSharp_POS_System.src.apps.dashboards
 
         private void rjButton2_Click(object sender, EventArgs e)
         {
-
+            finalbillview finalbillview = new finalbillview();
+            panel1.Controls.Clear();
+            usercontroladd.addusercontrol(finalbillview, panel1);
         }
     }
 }
