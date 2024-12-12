@@ -125,6 +125,12 @@
     <Compile Include="src\apps\discountadd.Designer.cs">
       <DependentUpon>discountadd.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\apps\finalbillview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\apps\finalbillview.Designer.cs">
+      <DependentUpon>finalbillview.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\apps\inventorydash userctrl\inventoryadd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\discountadd.resx">
       <DependentUpon>discountadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\finalbillview.resx">
+      <DependentUpon>finalbillview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\inventorydash userctrl\inventoryadd.resx">
       <DependentUpon>inventoryadd.cs</DependentUpon>
