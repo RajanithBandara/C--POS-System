@@ -41,5 +41,15 @@ namespace CSharp_POS_System.src.apps.dashboards
             panel1.Controls.Clear();
             usercontroladd.addusercontrol(supplierdet, panel1);
         }
+
+        private void inventorydashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
