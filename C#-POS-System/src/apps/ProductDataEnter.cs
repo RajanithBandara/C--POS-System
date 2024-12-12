@@ -16,5 +16,10 @@ namespace CSharp_POS_System.src.apps
         {
             InitializeComponent();
         }
+
+        private void rjPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
