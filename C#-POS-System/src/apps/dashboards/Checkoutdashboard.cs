@@ -36,5 +36,20 @@ namespace CSharp_POS_System.src.apps.dashboards
         {
 
         }
+
+        private void rjPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Checkoutdashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjButton4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
