@@ -107,6 +107,12 @@
     <Compile Include="src\apps\dashboards\Admin panel.Designer.cs">
       <DependentUpon>Admin panel.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\apps\dashboards\Checkoutdashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\apps\dashboards\Checkoutdashboard.Designer.cs">
+      <DependentUpon>Checkoutdashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\apps\dashboards\inventorydashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,12 @@
     </Compile>
     <Compile Include="src\apps\discountadd.Designer.cs">
       <DependentUpon>discountadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\apps\finalbillview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\apps\finalbillview.Designer.cs">
+      <DependentUpon>finalbillview.cs</DependentUpon>
     </Compile>
     <Compile Include="src\apps\inventorydash userctrl\inventoryadd.cs">
       <SubType>UserControl</SubType>
@@ -184,6 +196,9 @@
     <EmbeddedResource Include="src\apps\dashboards\Admin panel.resx">
       <DependentUpon>Admin panel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\dashboards\Checkoutdashboard.resx">
+      <DependentUpon>Checkoutdashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\apps\dashboards\inventorydashboard.resx">
       <DependentUpon>inventorydashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\discountadd.resx">
       <DependentUpon>discountadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\finalbillview.resx">
+      <DependentUpon>finalbillview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\inventorydash userctrl\inventoryadd.resx">
       <DependentUpon>inventoryadd.cs</DependentUpon>
