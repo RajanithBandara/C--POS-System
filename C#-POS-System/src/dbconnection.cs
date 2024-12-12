@@ -13,7 +13,7 @@ namespace WindowsAppProject.Apps
         public string ConnectionString { get; private set; }
         private dbconnection()
         {
-            ConnectionString = "Server=localhost,1433;Database=posdb;User Id=sa;Password=password123#;";
+            ConnectionString = "Server=localhost,1433;Database=posdb;User Id=sa;Password=haruma123#;";
         }
     }
 
