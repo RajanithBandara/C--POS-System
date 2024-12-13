@@ -101,6 +101,12 @@
     <Compile Include="src\apps\Admin panel uctrl\UserAddition.Designer.cs">
       <DependentUpon>UserAddition.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\apps\customerdetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\apps\customerdetails.Designer.cs">
+      <DependentUpon>customerdetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\apps\dashboards\Admin panel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +198,9 @@
     </Compile>
     <EmbeddedResource Include="src\apps\Admin panel uctrl\UserAddition.resx">
       <DependentUpon>UserAddition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\customerdetails.resx">
+      <DependentUpon>customerdetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\dashboards\Admin panel.resx">
       <DependentUpon>Admin panel.cs</DependentUpon>

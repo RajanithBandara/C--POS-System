@@ -52,7 +52,9 @@ namespace CSharp_POS_System.src.apps.dashboards
 
         private void rjButton4_Click(object sender, EventArgs e)
         {
-
+            customerdetails customerdetails = new customerdetails();
+            panel2.Controls.Clear();
+            usercontroladd.addusercontrol(customerdetails, panel2);
         }
 
         private void rjButton2_Click_1(object sender, EventArgs e)
