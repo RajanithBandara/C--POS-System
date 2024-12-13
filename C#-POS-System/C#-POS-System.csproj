@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -154,11 +154,6 @@
     </Compile>
     <Compile Include="src\apps\LoginForm12.Designer.cs">
       <DependentUpon>LoginForm12.cs</DependentUpon>
-    <Compile Include="src\apps\ProductDataEnter.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="src\apps\ProductDataEnter.Designer.cs">
-      <DependentUpon>ProductDataEnter.cs</DependentUpon>
     </Compile>
     <Compile Include="src\apps\Supplier details addition form.cs">
       <SubType>UserControl</SubType>
@@ -224,8 +219,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\LoginForm12.resx">
       <DependentUpon>LoginForm12.cs</DependentUpon>
-    <EmbeddedResource Include="src\apps\ProductDataEnter.resx">
-      <DependentUpon>ProductDataEnter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\Supplier details addition form.resx">
       <DependentUpon>Supplier details addition form.cs</DependentUpon>
