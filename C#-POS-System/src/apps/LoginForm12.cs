@@ -36,7 +36,7 @@ namespace CSharp_POS_System.src.apps
                 {
                     connection.Open();
 
-                    string sql = "SELECT Pwd, Role FROM EmployeeTable WHERE UserName = @username";
+                    string sql = "SELECT Pwd, Position FROM EmployeeTable WHERE UserName = @username";
 
                     using (SqlCommand cmd = new SqlCommand(sql, connection))
                     {
@@ -47,7 +47,7 @@ namespace CSharp_POS_System.src.apps
                             if (reader.Read())
                             {
                                 string storedPassword = reader["Pwd"].ToString();
-                                string role = reader["Role"].ToString();
+                                string position = reader["Position"].ToString();
 
                                 if (storedPassword == enteredPassword)
                                 {
@@ -55,7 +55,7 @@ namespace CSharp_POS_System.src.apps
                                     this.Hide();
 
                                     // Redirect based on role
-                                    switch (role)
+                                    switch (position)
                                     {
                                         case "Manager":
                                             maindashboard dashboard = new maindashboard();
@@ -70,7 +70,7 @@ namespace CSharp_POS_System.src.apps
                                             inventorydashboard.Show();
                                             break;
                                         default:
-                                            MessageBox.Show("Unknown role. Access denied.", "Error");
+                                            MessageBox.Show("Unknown position. Access denied.", "Error");
                                             this.Show();
                                             break;
                                     }
