@@ -58,5 +58,10 @@ namespace CSharp_POS_System.src.apps
                 kryptonDataGridView1.Rows.Add("001", "Munchee biscuit", "350", "3", "1050", "50", "150", "900");
             }
         }
+
+        private void kryptonDataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
