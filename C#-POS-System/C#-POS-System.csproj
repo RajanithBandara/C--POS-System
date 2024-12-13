@@ -149,6 +149,12 @@
     <Compile Include="src\apps\inventorydash userctrl\supplier details table.Designer.cs">
       <DependentUpon>supplier details table.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\apps\LoginForm12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\apps\LoginForm12.Designer.cs">
+      <DependentUpon>LoginForm12.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\apps\Supplier details addition form.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\inventorydash userctrl\supplier details table.resx">
       <DependentUpon>supplier details table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\LoginForm12.resx">
+      <DependentUpon>LoginForm12.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\Supplier details addition form.resx">
       <DependentUpon>Supplier details addition form.cs</DependentUpon>
