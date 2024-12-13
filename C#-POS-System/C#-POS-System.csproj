@@ -160,6 +160,11 @@
     </Compile>
     <Compile Include="src\apps\LoginForm12.Designer.cs">
       <DependentUpon>LoginForm12.cs</DependentUpon>
+    <Compile Include="src\apps\ProductDataEnter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\apps\ProductDataEnter.Designer.cs">
+      <DependentUpon>ProductDataEnter.cs</DependentUpon>
     </Compile>
     <Compile Include="src\apps\Supplier details addition form.cs">
       <SubType>UserControl</SubType>
@@ -228,6 +233,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\LoginForm12.resx">
       <DependentUpon>LoginForm12.cs</DependentUpon>
+    <EmbeddedResource Include="src\apps\ProductDataEnter.resx">
+      <DependentUpon>ProductDataEnter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\Supplier details addition form.resx">
       <DependentUpon>Supplier details addition form.cs</DependentUpon>
