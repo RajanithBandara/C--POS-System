@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsAppProject.Apps;
 
 namespace CSharp_POS_System.src.apps
 {
@@ -33,7 +34,7 @@ namespace CSharp_POS_System.src.apps
             }
             else
             {
-                MessageBox.Show($"Welcome, {username}! Login Successful.", "Success");
+                string connectionstr = dbconnection.Instance.ConnectionString;
             }
         }
     }
