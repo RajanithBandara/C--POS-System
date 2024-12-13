@@ -45,7 +45,7 @@ namespace CSharp_POS_System.src.apps
             kryptonDataGridView1.Columns[col5].Width = widthoff / 10;
 
             var col6 = kryptonDataGridView1.Columns.Add("Column6", "Discount Detail");
-            kryptonDataGridView1.Columns[col6].Width = widthoff / 8;
+            kryptonDataGridView1.Columns[col6].Width = widthoff / 9;
 
             var col7 = kryptonDataGridView1.Columns.Add("Column7", "Total Discount");
             kryptonDataGridView1.Columns[col7].Width = widthoff / 8;
