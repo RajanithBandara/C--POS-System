@@ -40,7 +40,7 @@
             // 
             // rjPanel1
             // 
-            this.rjPanel1.BackColor = System.Drawing.Color.White;
+            this.rjPanel1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.rjPanel1.BorderRadius = 30;
             this.rjPanel1.Controls.Add(this.button1);
             this.rjPanel1.Controls.Add(this.textBox2);
