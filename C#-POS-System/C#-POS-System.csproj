@@ -119,16 +119,136 @@
     <Compile Include="src\apps\dashboards\inventorydashboard.Designer.cs">
       <DependentUpon>inventorydashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\apps\home\pos.cs">
+    <Compile Include="src\apps\dashboards\maindashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\apps\home\pos.Designer.cs">
-      <DependentUpon>pos.cs</DependentUpon>
+    <Compile Include="src\apps\dashboards\maindashboard.Designer.cs">
+      <DependentUpon>maindashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\apps\discountadd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\apps\discountadd.Designer.cs">
+      <DependentUpon>discountadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\apps\finalbillview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\apps\finalbillview.Designer.cs">
+      <DependentUpon>finalbillview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\apps\inventorydash userctrl\inventoryadd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\apps\inventorydash userctrl\inventoryadd.Designer.cs">
+      <DependentUpon>inventoryadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\apps\inventorydash userctrl\supplier details table.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\apps\inventorydash userctrl\supplier details table.Designer.cs">
+      <DependentUpon>supplier details table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\apps\LoginForm12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\apps\LoginForm12.Designer.cs">
+      <DependentUpon>LoginForm12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\apps\Supplier details addition form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\apps\Supplier details addition form.Designer.cs">
+      <DependentUpon>Supplier details addition form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\apps\testui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\apps\testui.Designer.cs">
+      <DependentUpon>testui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\apps\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\apps\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\dbconnection.cs" />
+    <Compile Include="src\RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\RJPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\usercontroladd.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="src\apps\Admin panel uctrl\UserAddition.resx">
+      <DependentUpon>UserAddition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\dashboards\Admin panel.resx">
+      <DependentUpon>Admin panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\dashboards\Checkoutdashboard.resx">
+      <DependentUpon>Checkoutdashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\dashboards\inventorydashboard.resx">
+      <DependentUpon>inventorydashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\dashboards\maindashboard.resx">
+      <DependentUpon>maindashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\discountadd.resx">
+      <DependentUpon>discountadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\finalbillview.resx">
+      <DependentUpon>finalbillview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\inventorydash userctrl\inventoryadd.resx">
+      <DependentUpon>inventoryadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\inventorydash userctrl\supplier details table.resx">
+      <DependentUpon>supplier details table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\LoginForm12.resx">
+      <DependentUpon>LoginForm12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\Supplier details addition form.resx">
+      <DependentUpon>Supplier details addition form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\testui.resx">
+      <DependentUpon>testui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Images\image.png" />
-    <EmbeddedResource Include="Resources\Images\logo.png" />
+    <None Include="App.config" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\loading.png" />
+    <None Include="Resources\box.png" />
+    <None Include="Resources\checklist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\apps\maindash userctrl\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
