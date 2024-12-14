@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
             this.rjPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +49,7 @@
             this.kryptonDataGridView1.RowTemplate.Height = 24;
             this.kryptonDataGridView1.Size = new System.Drawing.Size(1630, 537);
             this.kryptonDataGridView1.TabIndex = 0;
+            this.kryptonDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kryptonDataGridView1_CellContentClick_1);
             // 
             // rjPanel1
             // 
@@ -106,12 +108,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Total Price :";
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1625, 534);
+            this.panel1.TabIndex = 2;
+            // 
             // finalbillview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.rjPanel1);
             this.Controls.Add(this.kryptonDataGridView1);
+            this.Controls.Add(this.panel1);
             this.Name = "finalbillview";
             this.Size = new System.Drawing.Size(1630, 679);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
@@ -129,5 +140,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

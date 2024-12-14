@@ -1,4 +1,5 @@
 ﻿using C__POS_System.src.apps;
+using CSharp_POS_System.src.apps;
 using CSharp_POS_System.src.apps.dashboards;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace C__POS_System
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Checkoutdashboard());
+            Application.Run(new LoginForm12());
 
 
         }
