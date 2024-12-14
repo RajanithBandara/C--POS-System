@@ -21,7 +21,7 @@ namespace C__POS_System
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new LoginForm12());
+            Application.Run(new maindashboard());
 
 
         }

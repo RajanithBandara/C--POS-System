@@ -44,7 +44,7 @@ namespace CSharp_POS_System.src.apps
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            string PromotionID = textBox1.Text;
+    string PromotionID = textBox1.Text;
             string Description = textBox2.Text;
             DateTime ValidatePeriod = dateTimePicker1.Value;
             string ValidateProductID = textBox3.Text;
