@@ -39,5 +39,10 @@ namespace CSharp_POS_System.src.apps
             textBox3.Text = string.Empty;
             dateTimePicker1.Value = DateTime.Now;
         }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
