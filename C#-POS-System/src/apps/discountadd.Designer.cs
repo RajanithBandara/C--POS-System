@@ -40,6 +40,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.rjPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +49,8 @@
             // 
             this.rjPanel1.BackColor = System.Drawing.Color.DarkGray;
             this.rjPanel1.BorderRadius = 30;
+            this.rjPanel1.Controls.Add(this.textBox4);
+            this.rjPanel1.Controls.Add(this.label6);
             this.rjPanel1.Controls.Add(this.rjButton2);
             this.rjPanel1.Controls.Add(this.textBox3);
             this.rjPanel1.Controls.Add(this.textBox2);
@@ -154,7 +158,7 @@
             this.dateTimePicker1.AccessibleRole = System.Windows.Forms.AccessibleRole.Client;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(405, 366);
+            this.dateTimePicker1.Location = new System.Drawing.Point(405, 368);
             this.dateTimePicker1.MinDate = new System.DateTime(1953, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(296, 30);
@@ -198,6 +202,26 @@
             this.rjButton1.Text = "Submit";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(182, 492);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(164, 25);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Promotion Type";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(405, 487);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(296, 30);
+            this.textBox4.TabIndex = 12;
             // 
             // discountadd
             // 
@@ -228,5 +252,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private CustomControls.RJControls.RJButton rjButton2;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label6;
     }
 }
