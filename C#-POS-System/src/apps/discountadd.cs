@@ -44,7 +44,7 @@ namespace CSharp_POS_System.src.apps
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-    string PromotionID = textBox1.Text;
+            string PromotionID = textBox1.Text;
             string Description = textBox2.Text;
             DateTime ValidatePeriod = dateTimePicker1.Value;
             string ValidateProductID = textBox3.Text;
@@ -59,9 +59,9 @@ namespace CSharp_POS_System.src.apps
                 {
                     SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                     cmd.Parameters.AddWithValue("@Value1", PromotionID);
-                    cmd.Parameters.AddWithValue("@Value2", Description);
+                    cmd.Parameters.AddWithValue("@Value2", ValidateProductID);
                     cmd.Parameters.AddWithValue("@Value3", ValidatePeriod);
-                    cmd.Parameters.AddWithValue("@Value4", ValidateProductID);
+                    cmd.Parameters.AddWithValue("@Value4", Description);
                     cmd.Parameters.AddWithValue("@Value5", PromotionType);
 
 
