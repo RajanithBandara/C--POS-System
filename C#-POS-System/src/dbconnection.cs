@@ -16,7 +16,7 @@ namespace WindowsAppProject.Apps
             try
             {
                 // Hardcoded connection string
-                ConnectionString = "Server=localhost,1433;Database=possdb;User Id=sa;Password=password123#";
+                ConnectionString = "Server=localhost,1433;Database=posdb;User Id=sa;Password=password123#";
 
                 // You can add environment-based connection string selection here
                 // E.g., Dev vs Production
