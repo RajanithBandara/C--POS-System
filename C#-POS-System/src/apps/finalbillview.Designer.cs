@@ -30,11 +30,11 @@
         {
             this.kryptonDataGridView1 = new Krypton.Toolkit.KryptonDataGridView();
             this.rjPanel1 = new RoundedPanelClass.RJPanel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.totalprice = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.totalDiscount = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
             this.rjPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -55,9 +55,9 @@
             // 
             this.rjPanel1.BackColor = System.Drawing.Color.White;
             this.rjPanel1.BorderRadius = 30;
-            this.rjPanel1.Controls.Add(this.textBox2);
+            this.rjPanel1.Controls.Add(this.totalDiscount);
             this.rjPanel1.Controls.Add(this.label2);
-            this.rjPanel1.Controls.Add(this.textBox1);
+            this.rjPanel1.Controls.Add(this.totalprice);
             this.rjPanel1.Controls.Add(this.label1);
             this.rjPanel1.ForeColor = System.Drawing.Color.White;
             this.rjPanel1.GradientAngle = 90F;
@@ -67,14 +67,6 @@
             this.rjPanel1.Name = "rjPanel1";
             this.rjPanel1.Size = new System.Drawing.Size(1601, 106);
             this.rjPanel1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(763, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(287, 30);
-            this.textBox2.TabIndex = 3;
             // 
             // label2
             // 
@@ -88,13 +80,14 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Total Discount :";
             // 
-            // textBox1
+            // totalprice
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1254, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(287, 30);
-            this.textBox1.TabIndex = 1;
+            this.totalprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalprice.Location = new System.Drawing.Point(1254, 38);
+            this.totalprice.Name = "totalprice";
+            this.totalprice.Size = new System.Drawing.Size(287, 30);
+            this.totalprice.TabIndex = 1;
+            this.totalprice.TextChanged += new System.EventHandler(this.totalprice_TextChanged);
             // 
             // label1
             // 
@@ -115,6 +108,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1625, 534);
             this.panel1.TabIndex = 2;
+            // 
+            // totalDiscount
+            // 
+            this.totalDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalDiscount.Location = new System.Drawing.Point(763, 40);
+            this.totalDiscount.Name = "totalDiscount";
+            this.totalDiscount.Size = new System.Drawing.Size(287, 30);
+            this.totalDiscount.TabIndex = 5;
+            this.totalDiscount.TextChanged += new System.EventHandler(this.totalDiscount_TextChanged);
             // 
             // finalbillview
             // 
@@ -137,9 +139,9 @@
         private Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
         private RoundedPanelClass.RJPanel rjPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox totalprice;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox totalDiscount;
     }
 }
