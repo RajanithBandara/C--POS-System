@@ -43,9 +43,15 @@ namespace CSharp_POS_System.src.apps.Admin_panel_uctrl
 
                 
                 string databasePassword = GetPasswordFromDatabase(userId);
-
+                string databaseUsername = GetUsernameFromDatabase(userId);
                 
-                if (databasePassword == null)
+                if(databaseUsername == userName)
+            {
+                MessageBox.Show("The current username does not match the database username.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (databasePassword == null)
                 {
                     MessageBox.Show("User ID not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -106,8 +112,38 @@ namespace CSharp_POS_System.src.apps.Admin_panel_uctrl
 
                 return password;
             }
+        private string GetUsernameFromDatabase(string userId)
+        {
+            string username = null;
 
-            private bool UpdateDatabase(string userId, string userName, string newPassword)
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT  Username FROM UserTable WHERE UserID = @UserID";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@UserID", userId);
+
+                        object result = cmd.ExecuteScalar();
+                        if (result != null)
+                        {
+                            username = result.ToString();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Database error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            return username;
+        }
+
+
+        private bool UpdateDatabase(string userId, string userName, string newPassword)
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
