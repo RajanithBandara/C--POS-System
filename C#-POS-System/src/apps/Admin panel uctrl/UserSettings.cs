@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsAppProject.Apps;
 using System.Data.SqlClient;
+using System.Data.OleDb;
 
 namespace CSharp_POS_System.src.apps.Admin_panel_uctrl
 {
@@ -169,7 +170,46 @@ namespace CSharp_POS_System.src.apps.Admin_panel_uctrl
                     }
                 }
             }
+
+        private void rjButton4_Click(object sender, EventArgs e)
+        {
+            string userId = textBox1.Text.Trim();
+            string sqlcmd = $"SELECT username from UserTable where userId={userId}";
+            using (SqlConnection conn = new SqlConnection(dbconnection.Instance.ConnectionString))
+            {
+                conn.Open();
+                
+                using (SqlCommand cmd = new SqlCommand(sqlcmd, conn))
+                {
+                    
+
+                    try
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string username = reader.GetString(1);
+                                
+
+                                textBox2.Text = username;
+                                
+                            }
+                            else
+                            {
+                                MessageBox.Show("No user data found for the current username.");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
+                    }
+                }
+            }
         }
     }
+                }
+    
 
 
