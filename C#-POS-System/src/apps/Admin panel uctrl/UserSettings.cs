@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsAppProject.Apps;
 using System.Data.SqlClient;
+using System.Data.OleDb;
 
 namespace CSharp_POS_System.src.apps.Admin_panel_uctrl
 {
@@ -43,9 +44,15 @@ namespace CSharp_POS_System.src.apps.Admin_panel_uctrl
 
                 
                 string databasePassword = GetPasswordFromDatabase(userId);
-
+                string databaseUsername = GetUsernameFromDatabase(userId);
                 
-                if (databasePassword == null)
+                if(databaseUsername  != userName)
+            {
+                MessageBox.Show("The current username does not match the database username.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (databasePassword == null)
                 {
                     MessageBox.Show("User ID not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -106,8 +113,38 @@ namespace CSharp_POS_System.src.apps.Admin_panel_uctrl
 
                 return password;
             }
+        private string GetUsernameFromDatabase(string userId)
+        {
+            string username = null;
 
-            private bool UpdateDatabase(string userId, string userName, string newPassword)
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT  Username FROM UserTable WHERE UserID = @UserID";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@UserID", userId);
+
+                        object result = cmd.ExecuteScalar();
+                        if (result != null)
+                        {
+                            username = result.ToString();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Database error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            return username;
+        }
+
+
+        private bool UpdateDatabase(string userId, string userName, string newPassword)
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
@@ -133,7 +170,51 @@ namespace CSharp_POS_System.src.apps.Admin_panel_uctrl
                     }
                 }
             }
+
+        private void rjButton4_Click(object sender, EventArgs e)
+        {
+            if (!int.TryParse(textBox1.Text, out int userId))
+            {
+                MessageBox.Show("Please enter a valid numeric User ID.");
+                return;
+            }
+
+            string sqlcmd = "SELECT username FROM UserTable WHERE userId = @userId";
+            using (SqlConnection conn = new SqlConnection(dbconnection.Instance.ConnectionString))
+            {
+                conn.Open();
+
+                using (SqlCommand cmd = new SqlCommand(sqlcmd, conn))
+                {
+                    cmd.Parameters.AddWithValue("@userId", userId);
+
+                    try
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string username = reader.GetString(0);
+                                textBox2.Text = username;
+                            }
+                            else
+                            {
+                                MessageBox.Show("No user data found for the provided User ID.");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
+                    }
+                    conn.Close();
+                }
+            }
         }
+
+       
     }
+}
+    
 
 
