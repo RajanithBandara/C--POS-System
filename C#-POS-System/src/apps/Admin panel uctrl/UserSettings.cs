@@ -46,7 +46,7 @@ namespace CSharp_POS_System.src.apps.Admin_panel_uctrl
                 string databasePassword = GetPasswordFromDatabase(userId);
                 string databaseUsername = GetUsernameFromDatabase(userId);
                 
-                if(databaseUsername == userName)
+                if(databaseUsername  != userName)
             {
                 MessageBox.Show("The current username does not match the database username.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -173,15 +173,20 @@ namespace CSharp_POS_System.src.apps.Admin_panel_uctrl
 
         private void rjButton4_Click(object sender, EventArgs e)
         {
-            string userId = textBox1.Text.Trim();
-            string sqlcmd = $"SELECT username from UserTable where userId={userId}";
+            if (!int.TryParse(textBox1.Text, out int userId))
+            {
+                MessageBox.Show("Please enter a valid numeric User ID.");
+                return;
+            }
+
+            string sqlcmd = "SELECT username FROM UserTable WHERE userId = @userId";
             using (SqlConnection conn = new SqlConnection(dbconnection.Instance.ConnectionString))
             {
                 conn.Open();
-                
+
                 using (SqlCommand cmd = new SqlCommand(sqlcmd, conn))
                 {
-                    
+                    cmd.Parameters.AddWithValue("@userId", userId);
 
                     try
                     {
@@ -189,15 +194,12 @@ namespace CSharp_POS_System.src.apps.Admin_panel_uctrl
                         {
                             if (reader.Read())
                             {
-                                string username = reader.GetString(1);
-                                
-
+                                string username = reader.GetString(0);
                                 textBox2.Text = username;
-                                
                             }
                             else
                             {
-                                MessageBox.Show("No user data found for the current username.");
+                                MessageBox.Show("No user data found for the provided User ID.");
                             }
                         }
                     }
@@ -205,11 +207,14 @@ namespace CSharp_POS_System.src.apps.Admin_panel_uctrl
                     {
                         MessageBox.Show("An error occurred: " + ex.Message);
                     }
+                    conn.Close();
                 }
             }
         }
+
+       
     }
-                }
+}
     
 
 
