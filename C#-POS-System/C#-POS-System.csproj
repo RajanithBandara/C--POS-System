@@ -191,16 +191,16 @@
     <Compile Include="src\apps\Admin panel uctrl\UserAddition.Designer.cs">
       <DependentUpon>UserAddition.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\apps\billaddition.cs">
+    <Compile Include="src\apps\checkoutdash userctrl\billaddition.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\apps\billaddition.Designer.cs">
+    <Compile Include="src\apps\checkoutdash userctrl\billaddition.Designer.cs">
       <DependentUpon>billaddition.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\apps\customerdetails.cs">
+    <Compile Include="src\apps\checkoutdash userctrl\customerdetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\apps\customerdetails.Designer.cs">
+    <Compile Include="src\apps\checkoutdash userctrl\customerdetails.Designer.cs">
       <DependentUpon>customerdetails.cs</DependentUpon>
     </Compile>
     <Compile Include="src\apps\dashboards\Admin panel.cs">
@@ -227,16 +227,16 @@
     <Compile Include="src\apps\dashboards\maindashboard.Designer.cs">
       <DependentUpon>maindashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\apps\discountadd.cs">
+    <Compile Include="src\apps\maindash userctrl\discountadd.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\apps\discountadd.Designer.cs">
+    <Compile Include="src\apps\maindash userctrl\discountadd.Designer.cs">
       <DependentUpon>discountadd.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\apps\finalbillview.cs">
+    <Compile Include="src\apps\checkoutdash userctrl\finalbillview.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\apps\finalbillview.Designer.cs">
+    <Compile Include="src\apps\checkoutdash userctrl\finalbillview.Designer.cs">
       <DependentUpon>finalbillview.cs</DependentUpon>
     </Compile>
     <Compile Include="src\apps\inventorydash userctrl\inventoryadd.cs">
@@ -251,16 +251,16 @@
     <Compile Include="src\apps\inventorydash userctrl\supplier details table.Designer.cs">
       <DependentUpon>supplier details table.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\apps\LoginForm12.cs">
+    <Compile Include="src\apps\dashboards\LoginForm12.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\apps\LoginForm12.Designer.cs">
+    <Compile Include="src\apps\dashboards\LoginForm12.Designer.cs">
       <DependentUpon>LoginForm12.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\apps\Supplier details addition form.cs">
+    <Compile Include="src\apps\maindash userctrl\Supplier details addition form.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\apps\Supplier details addition form.Designer.cs">
+    <Compile Include="src\apps\maindash userctrl\Supplier details addition form.Designer.cs">
       <DependentUpon>Supplier details addition form.cs</DependentUpon>
     </Compile>
     <Compile Include="src\apps\testui.cs">
@@ -301,10 +301,10 @@
     <EmbeddedResource Include="src\apps\Admin panel uctrl\UserAddition.resx">
       <DependentUpon>UserAddition.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\apps\billaddition.resx">
+    <EmbeddedResource Include="src\apps\checkoutdash userctrl\billaddition.resx">
       <DependentUpon>billaddition.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\apps\customerdetails.resx">
+    <EmbeddedResource Include="src\apps\checkoutdash userctrl\customerdetails.resx">
       <DependentUpon>customerdetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\dashboards\Admin panel.resx">
@@ -319,10 +319,10 @@
     <EmbeddedResource Include="src\apps\dashboards\maindashboard.resx">
       <DependentUpon>maindashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\apps\discountadd.resx">
+    <EmbeddedResource Include="src\apps\maindash userctrl\discountadd.resx">
       <DependentUpon>discountadd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\apps\finalbillview.resx">
+    <EmbeddedResource Include="src\apps\checkoutdash userctrl\finalbillview.resx">
       <DependentUpon>finalbillview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\inventorydash userctrl\inventoryadd.resx">
@@ -331,10 +331,10 @@
     <EmbeddedResource Include="src\apps\inventorydash userctrl\supplier details table.resx">
       <DependentUpon>supplier details table.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\apps\LoginForm12.resx">
+    <EmbeddedResource Include="src\apps\dashboards\LoginForm12.resx">
       <DependentUpon>LoginForm12.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\apps\Supplier details addition form.resx">
+    <EmbeddedResource Include="src\apps\maindash userctrl\Supplier details addition form.resx">
       <DependentUpon>Supplier details addition form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\testui.resx">
@@ -361,9 +361,7 @@
     <None Include="Resources\box.png" />
     <None Include="Resources\checklist.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\apps\maindash userctrl\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
