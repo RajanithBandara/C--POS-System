@@ -40,7 +40,7 @@
             // 
             // rjPanel1
             // 
-            this.rjPanel1.BackColor = System.Drawing.Color.White;
+            this.rjPanel1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.rjPanel1.BorderRadius = 30;
             this.rjPanel1.Controls.Add(this.button1);
             this.rjPanel1.Controls.Add(this.textBox2);
@@ -124,7 +124,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Login Form";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // LoginForm12
             // 
