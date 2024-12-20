@@ -32,6 +32,7 @@
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rjButton3 = new CustomControls.RJControls.RJButton();
             this.rjPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,6 +40,7 @@
             // 
             this.rjPanel1.BackColor = System.Drawing.Color.DarkGray;
             this.rjPanel1.BorderRadius = 30;
+            this.rjPanel1.Controls.Add(this.rjButton3);
             this.rjPanel1.Controls.Add(this.rjButton2);
             this.rjPanel1.Controls.Add(this.rjButton1);
             this.rjPanel1.ForeColor = System.Drawing.Color.White;
@@ -101,6 +103,27 @@
             this.panel1.Size = new System.Drawing.Size(788, 688);
             this.panel1.TabIndex = 1;
             // 
+            // rjButton3
+            // 
+            this.rjButton3.BackColor = System.Drawing.Color.DimGray;
+            this.rjButton3.BackgroundColor = System.Drawing.Color.DimGray;
+            this.rjButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton3.BorderRadius = 6;
+            this.rjButton3.BorderSize = 0;
+            this.rjButton3.FlatAppearance.BorderSize = 0;
+            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.rjButton3.ForeColor = System.Drawing.Color.White;
+            this.rjButton3.Location = new System.Drawing.Point(89, 319);
+            this.rjButton3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rjButton3.Name = "rjButton3";
+            this.rjButton3.Size = new System.Drawing.Size(169, 69);
+            this.rjButton3.TabIndex = 2;
+            this.rjButton3.Text = "Add Employee";
+            this.rjButton3.TextColor = System.Drawing.Color.White;
+            this.rjButton3.UseVisualStyleBackColor = false;
+            this.rjButton3.Click += new System.EventHandler(this.rjButton3_Click);
+            // 
             // Admin_panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -123,5 +146,6 @@
         private System.Windows.Forms.Panel panel1;
         private CustomControls.RJControls.RJButton rjButton2;
         private CustomControls.RJControls.RJButton rjButton1;
+        private CustomControls.RJControls.RJButton rjButton3;
     }
 }

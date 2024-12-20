@@ -32,5 +32,12 @@ namespace CSharp_POS_System.src.apps.dashboards
             panel1.Controls.Clear();
             usercontroladd.addusercontrol(useradd, panel1);
         }
+
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+            Empadd empadd = new Empadd();
+            panel1.Controls.Clear();
+            usercontroladd.addusercontrol(empadd, panel1);
+        }
     }
 }
