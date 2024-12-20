@@ -45,9 +45,10 @@
             this.rjPanel1.GradientAngle = 90F;
             this.rjPanel1.GradientBottomColor = System.Drawing.Color.DarkGray;
             this.rjPanel1.GradientTopColor = System.Drawing.Color.DarkGray;
-            this.rjPanel1.Location = new System.Drawing.Point(12, 18);
+            this.rjPanel1.Location = new System.Drawing.Point(14, 22);
+            this.rjPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rjPanel1.Name = "rjPanel1";
-            this.rjPanel1.Size = new System.Drawing.Size(308, 550);
+            this.rjPanel1.Size = new System.Drawing.Size(346, 688);
             this.rjPanel1.TabIndex = 0;
             // 
             // rjButton2
@@ -61,13 +62,15 @@
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(79, 352);
+            this.rjButton2.Location = new System.Drawing.Point(89, 440);
+            this.rjButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(150, 40);
+            this.rjButton2.Size = new System.Drawing.Size(169, 50);
             this.rjButton2.TabIndex = 1;
             this.rjButton2.Text = "Add User";
             this.rjButton2.TextColor = System.Drawing.Color.White;
             this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // rjButton1
             // 
@@ -80,9 +83,10 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(79, 156);
+            this.rjButton1.Location = new System.Drawing.Point(89, 195);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(150, 40);
+            this.rjButton1.Size = new System.Drawing.Size(169, 50);
             this.rjButton1.TabIndex = 0;
             this.rjButton1.Text = "Settings";
             this.rjButton1.TextColor = System.Drawing.Color.White;
@@ -91,19 +95,21 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(341, 18);
+            this.panel1.Location = new System.Drawing.Point(384, 22);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(700, 550);
+            this.panel1.Size = new System.Drawing.Size(788, 688);
             this.panel1.TabIndex = 1;
             // 
             // Admin_panel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1051, 583);
+            this.ClientSize = new System.Drawing.Size(1182, 729);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.rjPanel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Admin_panel";
             this.Text = "Admin_panel";
             this.rjPanel1.ResumeLayout(false);
