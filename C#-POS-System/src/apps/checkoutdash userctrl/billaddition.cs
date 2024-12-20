@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace C__POS_System.src.apps
+namespace CSharp_POS_System.src.apps
 {
-    public partial class Supplier_details_addition_form : UserControl
+    public partial class billaddition : UserControl
     {
-        public Supplier_details_addition_form()
+        public billaddition()
         {
             InitializeComponent();
         }
@@ -24,6 +24,16 @@ namespace C__POS_System.src.apps
             textBox3.Text = string.Empty;
             textBox4.Text = string.Empty;
             textBox5.Text = string.Empty;
+        }
+
+        private void rjButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
