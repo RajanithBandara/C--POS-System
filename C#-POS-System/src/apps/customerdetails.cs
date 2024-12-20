@@ -1,55 +1,92 @@
-﻿using RoundedPanelClass;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CSharp_POS_System.src.apps
 {
     public partial class customerdetails : UserControl
     {
+        private string connectionString = "Server=localhost,1433;Database=posdb;User Id=sa;Password=password123#"; 
+
         public customerdetails()
         {
             InitializeComponent();
-            datagridview();
+            InitializeDataGridView();
+            LoadCustomerData();
         }
 
         private void kryptonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            // Handle cell content click events if necessary
         }
 
-        private void datagridview()
+        // Method to initialize the DataGridView with columns and styles
+        private void InitializeDataGridView()
         {
-            kryptonDataGridView1.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Regular);
+            // Set default styles for the DataGridView
+            kryptonDataGridView1.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 13, FontStyle.Regular);
+            kryptonDataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 15, FontStyle.Bold);
 
-            kryptonDataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 13, FontStyle.Bold);
+            int widthoff = rjPanel1.Width; // Adjust column widths dynamically based on the panel width
 
-            int widthoff = rjPanel1.Width;
+            // Add columns with proper widths
+            kryptonDataGridView1.Columns.Add("Column1", "Customer ID");
+            kryptonDataGridView1.Columns["Column1"].Width = widthoff / 9;
 
-            var col1 = kryptonDataGridView1.Columns.Add("Column1", "Customer ID");
-            kryptonDataGridView1.Columns[col1].Width = widthoff / 9;
+            kryptonDataGridView1.Columns.Add("Column2", "Customer Name");
+            kryptonDataGridView1.Columns["Column2"].Width = widthoff / 5;
 
-            var col2 = kryptonDataGridView1.Columns.Add("Column2", "Customer Name");
-            kryptonDataGridView1.Columns[col2].Width = widthoff / 5;
+            kryptonDataGridView1.Columns.Add("Column3", "Email Address");
+            kryptonDataGridView1.Columns["Column3"].Width = widthoff / 5;
 
-            var col3 = kryptonDataGridView1.Columns.Add("Column3", "Email Address");
-            kryptonDataGridView1.Columns[col3].Width = widthoff / 5;
+            kryptonDataGridView1.Columns.Add("Column4", "Contact");
+            kryptonDataGridView1.Columns["Column4"].Width = widthoff / 7;
 
-            var col4 = kryptonDataGridView1.Columns.Add("Column4", "Contact");
-            kryptonDataGridView1.Columns[col4].Width = widthoff / 7;
+            kryptonDataGridView1.Columns.Add("Column5", "Postal Address");
+            kryptonDataGridView1.Columns["Column5"].Width = widthoff / 3;
 
-            var col5 = kryptonDataGridView1.Columns.Add("Column5", "Postal Address");
-            kryptonDataGridView1.Columns[col5].Width = widthoff / 3;
+            kryptonDataGridView1.RowTemplate.Height = 35;
+        }
 
-            for (int i = 1; i <= 20; i++)
+        // Method to load customer data from the database into the DataGridView
+        private void LoadCustomerData()
+        {
+            try
             {
-                kryptonDataGridView1.Rows.Add("101", "Saman Perera", "someone@gmail.com", "1234567890", "22/B, JayasiriMawatha, Katuneriya");
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open(); // Open the connection
+
+                    string query = "SELECT CustomerID, CustomerName, EmailAddress, ContactNo, PostalAddress FROM CustomerTable";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd); // Adapter to fill the DataTable
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable); // Populate the DataTable with query results
+
+                        kryptonDataGridView1.Rows.Clear(); // Clear existing rows in the DataGridView
+
+                        // Add rows from the DataTable to the DataGridView
+                        foreach (DataRow row in dataTable.Rows)
+                        {
+                            kryptonDataGridView1.Rows.Add(
+                                row["CustomerID"].ToString(),
+                                row["CustomerName"].ToString(),
+                                row["EmailAddress"].ToString(),
+                                row["ContactNo"].ToString(),
+                                row["PostalAddress"].ToString()
+                            );
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Display an error message if something goes wrong
+                MessageBox.Show($"Error loading customer data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

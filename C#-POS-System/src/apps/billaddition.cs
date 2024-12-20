@@ -25,5 +25,15 @@ namespace CSharp_POS_System.src.apps
             textBox4.Text = string.Empty;
             textBox5.Text = string.Empty;
         }
+
+        private void rjButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
