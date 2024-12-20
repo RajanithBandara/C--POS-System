@@ -25,5 +25,12 @@ namespace CSharp_POS_System.src.apps.dashboards
             panel1.Controls.Clear();
             usercontroladd.addusercontrol(usersettings, panel1);
         }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            UserAddition useradd = new UserAddition();  
+            panel1.Controls.Clear();
+            usercontroladd.addusercontrol(useradd, panel1);
+        }
     }
 }
