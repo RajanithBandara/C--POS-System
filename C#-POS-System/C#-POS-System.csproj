@@ -227,6 +227,12 @@
     <Compile Include="src\apps\dashboards\maindashboard.Designer.cs">
       <DependentUpon>maindashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\apps\inventorydash userctrl\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\apps\inventorydash userctrl\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\apps\maindash userctrl\discountadd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -318,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\dashboards\maindashboard.resx">
       <DependentUpon>maindashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\inventorydash userctrl\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\maindash userctrl\discountadd.resx">
       <DependentUpon>discountadd.cs</DependentUpon>

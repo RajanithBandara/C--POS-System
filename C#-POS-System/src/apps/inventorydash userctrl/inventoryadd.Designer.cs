@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.rjPanel1 = new RoundedPanelClass.RJPanel();
+            this.kryptonDateTimePicker2 = new Krypton.Toolkit.KryptonDateTimePicker();
+            this.kryptonDateTimePicker1 = new Krypton.Toolkit.KryptonDateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
@@ -52,8 +54,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.kryptonDateTimePicker1 = new Krypton.Toolkit.KryptonDateTimePicker();
-            this.kryptonDateTimePicker2 = new Krypton.Toolkit.KryptonDateTimePicker();
             this.rjPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +94,22 @@
             this.rjPanel1.Name = "rjPanel1";
             this.rjPanel1.Size = new System.Drawing.Size(883, 723);
             this.rjPanel1.TabIndex = 0;
+            // 
+            // kryptonDateTimePicker2
+            // 
+            this.kryptonDateTimePicker2.CalendarTodayDate = new System.DateTime(2024, 12, 23, 0, 0, 0, 0);
+            this.kryptonDateTimePicker2.Location = new System.Drawing.Point(403, 549);
+            this.kryptonDateTimePicker2.Name = "kryptonDateTimePicker2";
+            this.kryptonDateTimePicker2.Size = new System.Drawing.Size(296, 25);
+            this.kryptonDateTimePicker2.TabIndex = 27;
+            // 
+            // kryptonDateTimePicker1
+            // 
+            this.kryptonDateTimePicker1.CalendarTodayDate = new System.DateTime(2024, 12, 23, 0, 0, 0, 0);
+            this.kryptonDateTimePicker1.Location = new System.Drawing.Point(403, 452);
+            this.kryptonDateTimePicker1.Name = "kryptonDateTimePicker1";
+            this.kryptonDateTimePicker1.Size = new System.Drawing.Size(296, 25);
+            this.kryptonDateTimePicker1.TabIndex = 26;
             // 
             // comboBox1
             // 
@@ -341,20 +357,6 @@
             this.label1.Size = new System.Drawing.Size(339, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Inventory Update Form";
-            // 
-            // kryptonDateTimePicker1
-            // 
-            this.kryptonDateTimePicker1.Location = new System.Drawing.Point(403, 452);
-            this.kryptonDateTimePicker1.Name = "kryptonDateTimePicker1";
-            this.kryptonDateTimePicker1.Size = new System.Drawing.Size(296, 25);
-            this.kryptonDateTimePicker1.TabIndex = 26;
-            // 
-            // kryptonDateTimePicker2
-            // 
-            this.kryptonDateTimePicker2.Location = new System.Drawing.Point(403, 549);
-            this.kryptonDateTimePicker2.Name = "kryptonDateTimePicker2";
-            this.kryptonDateTimePicker2.Size = new System.Drawing.Size(296, 25);
-            this.kryptonDateTimePicker2.TabIndex = 27;
             // 
             // inventoryadd
             // 
