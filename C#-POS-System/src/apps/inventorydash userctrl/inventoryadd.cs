@@ -59,6 +59,14 @@ namespace CSharp_POS_System.src.apps.inventorydash_userctrl
             }
 
         }
+        private void addinventorydata()
+        {
+            string connectionstr = dbconnection.Instance.ConnectionString;
+            using (SqlConnection conn = new SqlConnection(connectionstr))
+            {
+                
+            }
+        }
 
         private void rjButton2_Click(object sender, EventArgs e)
         {
