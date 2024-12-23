@@ -33,13 +33,11 @@
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -54,6 +52,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.kryptonDateTimePicker1 = new Krypton.Toolkit.KryptonDateTimePicker();
+            this.kryptonDateTimePicker2 = new Krypton.Toolkit.KryptonDateTimePicker();
             this.rjPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,17 +61,17 @@
             // 
             this.rjPanel1.BackColor = System.Drawing.Color.DarkGray;
             this.rjPanel1.BorderRadius = 30;
+            this.rjPanel1.Controls.Add(this.kryptonDateTimePicker2);
+            this.rjPanel1.Controls.Add(this.kryptonDateTimePicker1);
             this.rjPanel1.Controls.Add(this.comboBox1);
             this.rjPanel1.Controls.Add(this.rjButton2);
             this.rjPanel1.Controls.Add(this.rjButton1);
             this.rjPanel1.Controls.Add(this.textBox11);
-            this.rjPanel1.Controls.Add(this.textBox10);
             this.rjPanel1.Controls.Add(this.textBox9);
-            this.rjPanel1.Controls.Add(this.textBox8);
             this.rjPanel1.Controls.Add(this.textBox7);
             this.rjPanel1.Controls.Add(this.textBox6);
             this.rjPanel1.Controls.Add(this.textBox5);
-            this.rjPanel1.Controls.Add(this.textBox4);
+            this.rjPanel1.Controls.Add(this.textBox3);
             this.rjPanel1.Controls.Add(this.textBox2);
             this.rjPanel1.Controls.Add(this.textBox1);
             this.rjPanel1.Controls.Add(this.label12);
@@ -149,34 +149,18 @@
             // textBox11
             // 
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox11.Location = new System.Drawing.Point(403, 605);
+            this.textBox11.Location = new System.Drawing.Point(403, 595);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(296, 30);
             this.textBox11.TabIndex = 22;
             // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox10.Location = new System.Drawing.Point(403, 554);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(296, 30);
-            this.textBox10.TabIndex = 21;
-            // 
             // textBox9
             // 
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox9.Location = new System.Drawing.Point(403, 503);
+            this.textBox9.Location = new System.Drawing.Point(403, 498);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(296, 30);
             this.textBox9.TabIndex = 20;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox8.Location = new System.Drawing.Point(403, 452);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(296, 30);
-            this.textBox8.TabIndex = 19;
             // 
             // textBox7
             // 
@@ -202,13 +186,13 @@
             this.textBox5.Size = new System.Drawing.Size(296, 30);
             this.textBox5.TabIndex = 16;
             // 
-            // textBox4
+            // textBox3
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.Location = new System.Drawing.Point(403, 194);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(296, 30);
-            this.textBox4.TabIndex = 15;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox3.Location = new System.Drawing.Point(403, 194);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(296, 30);
+            this.textBox3.TabIndex = 15;
             // 
             // textBox2
             // 
@@ -231,7 +215,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(183, 607);
+            this.label12.Location = new System.Drawing.Point(183, 597);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(195, 25);
             this.label12.TabIndex = 11;
@@ -242,7 +226,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(183, 556);
+            this.label11.Location = new System.Drawing.Point(183, 549);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(148, 25);
             this.label11.TabIndex = 10;
@@ -253,7 +237,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(183, 505);
+            this.label10.Location = new System.Drawing.Point(183, 500);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(119, 25);
             this.label10.TabIndex = 9;
@@ -264,7 +248,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(183, 454);
+            this.label9.Location = new System.Drawing.Point(183, 452);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(123, 25);
             this.label9.TabIndex = 8;
@@ -358,6 +342,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Inventory Update Form";
             // 
+            // kryptonDateTimePicker1
+            // 
+            this.kryptonDateTimePicker1.Location = new System.Drawing.Point(403, 452);
+            this.kryptonDateTimePicker1.Name = "kryptonDateTimePicker1";
+            this.kryptonDateTimePicker1.Size = new System.Drawing.Size(296, 25);
+            this.kryptonDateTimePicker1.TabIndex = 26;
+            // 
+            // kryptonDateTimePicker2
+            // 
+            this.kryptonDateTimePicker2.Location = new System.Drawing.Point(403, 549);
+            this.kryptonDateTimePicker2.Name = "kryptonDateTimePicker2";
+            this.kryptonDateTimePicker2.Size = new System.Drawing.Size(296, 25);
+            this.kryptonDateTimePicker2.TabIndex = 27;
+            // 
             // inventoryadd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -390,16 +388,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox11;
         private CustomControls.RJControls.RJButton rjButton2;
         private CustomControls.RJControls.RJButton rjButton1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private Krypton.Toolkit.KryptonDateTimePicker kryptonDateTimePicker1;
+        private Krypton.Toolkit.KryptonDateTimePicker kryptonDateTimePicker2;
     }
 }
