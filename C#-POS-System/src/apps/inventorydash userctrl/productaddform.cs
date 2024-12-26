@@ -58,9 +58,9 @@ namespace CSharp_POS_System.src.apps.inventorydash_userctrl
                         MessageBox.Show("Error", ex.Message);
                     }
 
-                 }
+                }
             }
 
-        } 
+        }
     }
 }
