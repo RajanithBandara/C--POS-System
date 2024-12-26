@@ -227,11 +227,17 @@
     <Compile Include="src\apps\dashboards\maindashboard.Designer.cs">
       <DependentUpon>maindashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\apps\inventorydash userctrl\UserControl1.cs">
+    <Compile Include="src\apps\inventorydash userctrl\inventory view.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\apps\inventorydash userctrl\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="src\apps\inventorydash userctrl\inventory view.Designer.cs">
+      <DependentUpon>inventory view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\apps\inventorydash userctrl\productaddform.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\apps\inventorydash userctrl\productaddform.Designer.cs">
+      <DependentUpon>productaddform.cs</DependentUpon>
     </Compile>
     <Compile Include="src\apps\maindash userctrl\discountadd.cs">
       <SubType>UserControl</SubType>
@@ -325,8 +331,11 @@
     <EmbeddedResource Include="src\apps\dashboards\maindashboard.resx">
       <DependentUpon>maindashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\apps\inventorydash userctrl\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="src\apps\inventorydash userctrl\inventory view.resx">
+      <DependentUpon>inventory view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\inventorydash userctrl\productaddform.resx">
+      <DependentUpon>productaddform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\maindash userctrl\discountadd.resx">
       <DependentUpon>discountadd.cs</DependentUpon>
