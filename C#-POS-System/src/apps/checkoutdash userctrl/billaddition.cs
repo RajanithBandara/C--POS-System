@@ -32,25 +32,78 @@ namespace CSharp_POS_System.src.apps
 
         private void rjButton4_Click(object sender, EventArgs e)
         {
+            int ProID = int.Parse(textBox1.Text);
+            string BatchNo = textBox6.Text;
+
+            searching(ProID, BatchNo);
+        }
+
+        private void searching(int proid, string batchno)
+        {
+            using (SqlConnection conn = new SqlConnection(dbconnection.Instance.ConnectionString))
+            {
+                string sqlcmd_1 = @"
+                                    SELECT 
+                                        ProductTable.ProductName, 
+                                        StockUpdateTable.UnitPrice, 
+                                        StockUpdateTable.ExpiryDate, 
+                                        CategoryTable.CategoryType,
+                                        DiscountPromoTable.DiscountAmt
+                                    FROM ProductTable
+                                    INNER JOIN StockUpdateTable
+                                        ON ProductTable.ProductID = StockUpdateTable.ProductID
+                                    INNER JOIN CategoryTable
+                                        ON ProductTable.CategoryID = CategoryTable.CategoryID
+                                    Inner Join DiscountPromoTable
+                                    ON ProductTable.ProductID = DiscountPromoTable.ProductID
+                                    WHERE ProductTable.ProductID = @ProID 
+                                      AND StockUpdateTable.BatchNo = @BatchNo;";
+
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(sqlcmd_1, conn))
+                {
+                    cmd.Parameters.AddWithValue("@ProID", proid);
+                    cmd.Parameters.AddWithValue("@BatchNo", batchno);
+
+                    using (SqlDataReader readerdata = cmd.ExecuteReader())
+                    {
+                        if (readerdata.HasRows)
+                        {
+                            while (readerdata.Read())
+                            {
+                                string productName = readerdata["ProductName"].ToString();
+                                double unitPrice = Convert.ToDouble(readerdata["UnitPrice"]);
+                                DateTime expiryDate = Convert.ToDateTime(readerdata["ExpiryDate"]);
+                                string categoryType = readerdata["CategoryType"].ToString();
+                                double discountamount = Convert.ToDouble(readerdata["DiscountAmt"]);
+
+                                textBox2.Text = productName;
+                                textBox7.Text = categoryType;
+                                textBox3.Text = unitPrice.ToString("F2");
+                                textBox4.Text = expiryDate.ToString("yyyy-MM-dd");
+                                
+                                double discountcal = unitPrice/100 * discountamount;
+
+                                textBox8.Text = discountcal.ToString();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("No data found for the specified criteria.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+            }
 
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            int proid = int.Parse(textBox1.Text);
-            int batchno = int.Parse(textBox6.Text);
-            string proname = textBox2.Text;
-            int unitprice = int.Parse(textBox3.Text);
-            int discountprice = int.Parse(textBox8.Text);
-            int quantity = int.Parse(textBox5.Text);
-
-            passdata(proid, batchno, proname, unitprice, discountprice, quantity);
-            dataexport();
         }
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-
+            
         }
         private void passdata(int proid, int batchno, string proname, int unitprice, int discountedprice, int quantity)
         {

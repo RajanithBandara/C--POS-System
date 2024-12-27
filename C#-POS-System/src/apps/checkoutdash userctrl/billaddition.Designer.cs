@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.rjPanel1 = new RoundedPanelClass.RJPanel();
+            this.label10 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.rjButton4 = new CustomControls.RJControls.RJButton();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
@@ -49,6 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.rjPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@
             // 
             this.rjPanel1.BackColor = System.Drawing.Color.DarkGray;
             this.rjPanel1.BorderRadius = 30;
+            this.rjPanel1.Controls.Add(this.label10);
             this.rjPanel1.Controls.Add(this.textBox8);
             this.rjPanel1.Controls.Add(this.label9);
             this.rjPanel1.Controls.Add(this.textBox7);
@@ -86,12 +88,24 @@
             this.rjPanel1.Size = new System.Drawing.Size(1336, 779);
             this.rjPanel1.TabIndex = 5;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(528, 599);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(325, 26);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Discount Details (If available)";
+            // 
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox8.Location = new System.Drawing.Point(902, 438);
             this.textBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(403, 35);
             this.textBox8.TabIndex = 20;
             // 
@@ -113,6 +127,7 @@
             this.textBox7.Location = new System.Drawing.Point(902, 348);
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(403, 35);
             this.textBox7.TabIndex = 18;
             // 
@@ -148,15 +163,6 @@
             this.rjButton4.TextColor = System.Drawing.Color.White;
             this.rjButton4.UseVisualStyleBackColor = false;
             this.rjButton4.Click += new System.EventHandler(this.rjButton4_Click);
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox6.Location = new System.Drawing.Point(902, 244);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(403, 35);
-            this.textBox6.TabIndex = 15;
             // 
             // label7
             // 
@@ -227,6 +233,7 @@
             this.textBox4.Location = new System.Drawing.Point(255, 524);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(403, 35);
             this.textBox4.TabIndex = 9;
             // 
@@ -236,6 +243,7 @@
             this.textBox3.Location = new System.Drawing.Point(255, 441);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(403, 35);
             this.textBox3.TabIndex = 8;
             // 
@@ -245,6 +253,7 @@
             this.textBox2.Location = new System.Drawing.Point(255, 345);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(403, 35);
             this.textBox2.TabIndex = 7;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -330,6 +339,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Bill Addition Form";
             // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox6.Location = new System.Drawing.Point(902, 244);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(403, 35);
+            this.textBox6.TabIndex = 15;
+            // 
             // billaddition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -363,10 +381,11 @@
         private CustomControls.RJControls.RJButton rjButton1;
         private System.Windows.Forms.Label label7;
         private CustomControls.RJControls.RJButton rjButton4;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }
