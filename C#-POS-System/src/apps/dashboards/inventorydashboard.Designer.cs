@@ -39,11 +39,11 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(314, 10);
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Location = new System.Drawing.Point(353, 12);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1326, 780);
+            this.panel1.Size = new System.Drawing.Size(1492, 975);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -59,10 +59,10 @@
             this.rjPanel1.GradientAngle = 90F;
             this.rjPanel1.GradientBottomColor = System.Drawing.Color.DarkGray;
             this.rjPanel1.GradientTopColor = System.Drawing.Color.DarkGray;
-            this.rjPanel1.Location = new System.Drawing.Point(11, 10);
+            this.rjPanel1.Location = new System.Drawing.Point(12, 12);
             this.rjPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rjPanel1.Name = "rjPanel1";
-            this.rjPanel1.Size = new System.Drawing.Size(298, 780);
+            this.rjPanel1.Size = new System.Drawing.Size(335, 975);
             this.rjPanel1.TabIndex = 0;
             // 
             // rjButton4
@@ -77,10 +77,10 @@
             this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.rjButton4.ForeColor = System.Drawing.Color.White;
-            this.rjButton4.Location = new System.Drawing.Point(63, 569);
+            this.rjButton4.Location = new System.Drawing.Point(71, 711);
             this.rjButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rjButton4.Name = "rjButton4";
-            this.rjButton4.Size = new System.Drawing.Size(172, 46);
+            this.rjButton4.Size = new System.Drawing.Size(194, 58);
             this.rjButton4.TabIndex = 3;
             this.rjButton4.Text = "Messages";
             this.rjButton4.TextColor = System.Drawing.Color.White;
@@ -98,10 +98,10 @@
             this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.rjButton3.ForeColor = System.Drawing.Color.White;
-            this.rjButton3.Location = new System.Drawing.Point(63, 434);
+            this.rjButton3.Location = new System.Drawing.Point(71, 542);
             this.rjButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rjButton3.Name = "rjButton3";
-            this.rjButton3.Size = new System.Drawing.Size(172, 46);
+            this.rjButton3.Size = new System.Drawing.Size(194, 58);
             this.rjButton3.TabIndex = 2;
             this.rjButton3.Text = "Supplier Details";
             this.rjButton3.TextColor = System.Drawing.Color.White;
@@ -120,10 +120,10 @@
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(63, 299);
+            this.rjButton2.Location = new System.Drawing.Point(71, 374);
             this.rjButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(172, 46);
+            this.rjButton2.Size = new System.Drawing.Size(194, 58);
             this.rjButton2.TabIndex = 1;
             this.rjButton2.Text = "Inventory Update";
             this.rjButton2.TextColor = System.Drawing.Color.White;
@@ -142,10 +142,10 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(63, 164);
+            this.rjButton1.Location = new System.Drawing.Point(71, 205);
             this.rjButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(172, 46);
+            this.rjButton1.Size = new System.Drawing.Size(194, 58);
             this.rjButton1.TabIndex = 0;
             this.rjButton1.Text = "Inventory ";
             this.rjButton1.TextColor = System.Drawing.Color.White;
@@ -154,10 +154,10 @@
             // 
             // inventorydashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1651, 799);
+            this.ClientSize = new System.Drawing.Size(1857, 999);
             this.Controls.Add(this.rjPanel1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
