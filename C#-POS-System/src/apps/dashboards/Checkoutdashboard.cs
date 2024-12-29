@@ -63,5 +63,12 @@ namespace CSharp_POS_System.src.apps.dashboards
             panel2.Controls.Clear();
             usercontroladd.addusercontrol(finalbillview, panel2);
         }
+
+        private void rjButton1_Click_1(object sender, EventArgs e)
+        {
+            billaddition billadd = new billaddition();
+            panel2.Controls.Clear();
+            usercontroladd.addusercontrol(billadd, panel2);
+        }
     }
 }
