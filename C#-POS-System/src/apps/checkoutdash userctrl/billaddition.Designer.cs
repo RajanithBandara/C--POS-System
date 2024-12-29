@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.rjPanel1 = new RoundedPanelClass.RJPanel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.rjButton3 = new CustomControls.RJControls.RJButton();
+            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -49,7 +52,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.rjPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,13 +59,15 @@
             // 
             this.rjPanel1.BackColor = System.Drawing.Color.DarkGray;
             this.rjPanel1.BorderRadius = 30;
+            this.rjPanel1.Controls.Add(this.comboBox1);
+            this.rjPanel1.Controls.Add(this.rjButton3);
+            this.rjPanel1.Controls.Add(this.label11);
             this.rjPanel1.Controls.Add(this.label10);
             this.rjPanel1.Controls.Add(this.textBox8);
             this.rjPanel1.Controls.Add(this.label9);
             this.rjPanel1.Controls.Add(this.textBox7);
             this.rjPanel1.Controls.Add(this.label8);
             this.rjPanel1.Controls.Add(this.rjButton4);
-            this.rjPanel1.Controls.Add(this.textBox6);
             this.rjPanel1.Controls.Add(this.label7);
             this.rjPanel1.Controls.Add(this.rjButton2);
             this.rjPanel1.Controls.Add(this.rjButton1);
@@ -87,6 +91,47 @@
             this.rjPanel1.Name = "rjPanel1";
             this.rjPanel1.Size = new System.Drawing.Size(1336, 779);
             this.rjPanel1.TabIndex = 5;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(902, 241);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(403, 37);
+            this.comboBox1.TabIndex = 24;
+            // 
+            // rjButton3
+            // 
+            this.rjButton3.BackColor = System.Drawing.Color.DimGray;
+            this.rjButton3.BackgroundColor = System.Drawing.Color.DimGray;
+            this.rjButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton3.BorderRadius = 6;
+            this.rjButton3.BorderSize = 0;
+            this.rjButton3.FlatAppearance.BorderSize = 0;
+            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.rjButton3.ForeColor = System.Drawing.Color.White;
+            this.rjButton3.Location = new System.Drawing.Point(489, 241);
+            this.rjButton3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rjButton3.Name = "rjButton3";
+            this.rjButton3.Size = new System.Drawing.Size(169, 38);
+            this.rjButton3.TabIndex = 23;
+            this.rjButton3.Text = "Search";
+            this.rjButton3.TextColor = System.Drawing.Color.White;
+            this.rjButton3.UseVisualStyleBackColor = false;
+            this.rjButton3.Click += new System.EventHandler(this.rjButton3_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(566, 180);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(80, 26);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Status";
             // 
             // label10
             // 
@@ -154,10 +199,10 @@
             this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.rjButton4.ForeColor = System.Drawing.Color.White;
-            this.rjButton4.Location = new System.Drawing.Point(1137, 242);
+            this.rjButton4.Location = new System.Drawing.Point(1060, 287);
             this.rjButton4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rjButton4.Name = "rjButton4";
-            this.rjButton4.Size = new System.Drawing.Size(169, 38);
+            this.rjButton4.Size = new System.Drawing.Size(111, 38);
             this.rjButton4.TabIndex = 16;
             this.rjButton4.Text = "Search";
             this.rjButton4.TextColor = System.Drawing.Color.White;
@@ -339,15 +384,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Bill Addition Form";
             // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox6.Location = new System.Drawing.Point(902, 244);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(403, 35);
-            this.textBox6.TabIndex = 15;
-            // 
             // billaddition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -386,6 +422,8 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label11;
+        private CustomControls.RJControls.RJButton rjButton3;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

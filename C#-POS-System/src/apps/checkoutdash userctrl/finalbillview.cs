@@ -61,8 +61,7 @@ namespace CSharp_POS_System.src.apps
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "SELECT ProductID, ProductName, UnitPrice, Quantity, " +
-                                   "DiscountDetail, TotalDiscount, NetPrice FROM ProductTable";
+                    string query = "SELECT * From FinalBillView";
 
                     SqlCommand command = new SqlCommand(query, connection);
                     SqlDataAdapter adapter = new SqlDataAdapter(command);

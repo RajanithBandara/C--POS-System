@@ -33,7 +33,7 @@ namespace CSharp_POS_System.src.apps
         private void rjButton4_Click(object sender, EventArgs e)
         {
             int ProID = int.Parse(textBox1.Text);
-            string BatchNo = textBox6.Text;
+            string BatchNo = comboBox1.Text;
 
             searching(ProID, BatchNo);
         }
@@ -48,7 +48,8 @@ namespace CSharp_POS_System.src.apps
                                         StockUpdateTable.UnitPrice, 
                                         StockUpdateTable.ExpiryDate, 
                                         CategoryTable.CategoryType,
-                                        DiscountPromoTable.DiscountAmt
+                                        DiscountPromoTable.DiscountAmt,
+                                        DiscountPromoTable.PromotionDescription
                                     FROM ProductTable
                                     INNER JOIN StockUpdateTable
                                         ON ProductTable.ProductID = StockUpdateTable.ProductID
@@ -76,15 +77,26 @@ namespace CSharp_POS_System.src.apps
                                 DateTime expiryDate = Convert.ToDateTime(readerdata["ExpiryDate"]);
                                 string categoryType = readerdata["CategoryType"].ToString();
                                 double discountamount = Convert.ToDouble(readerdata["DiscountAmt"]);
+                                string promotiondesc = readerdata["PromotionDescription"].ToString();
 
                                 textBox2.Text = productName;
                                 textBox7.Text = categoryType;
                                 textBox3.Text = unitPrice.ToString("F2");
                                 textBox4.Text = expiryDate.ToString("yyyy-MM-dd");
                                 
-                                double discountcal = unitPrice/100 * discountamount;
+                                if (discountamount > 0)
+                                {
+                                    double discountcal = unitPrice / 100 * discountamount;
+                                    textBox8.Text = discountcal.ToString();
+                                }
+                                else
+                                {
+                                    discountamount = 0;
+                                    textBox8.Text = "0";
+                                }
 
-                                textBox8.Text = discountcal.ToString();
+
+                                label10.Text = promotiondesc;
                             }
                         }
                         else
@@ -103,9 +115,27 @@ namespace CSharp_POS_System.src.apps
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            
+            int ProductID = int.Parse(textBox1.Text);
+            string BatchNumber = comboBox1.Text;
+            string ProductName = textBox2.Text;
+            string CategoryType = textBox7.Text;
+            double UnitPrice = Convert.ToDouble(textBox3.Text);
+            double DiscountPrice = int.Parse(textBox8.Text);
+            int Quantity = int.Parse(textBox5.Text);
+            double TotalPrice = (UnitPrice - DiscountPrice) * Quantity;
+            DateTime ExpiryDate = Convert.ToDateTime(textBox4.Text);
+
+            try
+            {
+                passdata(ProductID, BatchNumber, ProductName, UnitPrice, DiscountPrice, Quantity, TotalPrice, ExpiryDate);
+
+            } catch (Exception ex)
+            {
+                MessageBox.Show($"Error occured {ex}");
+            }
+
         }
-        private void passdata(int proid, int batchno, string proname, int unitprice, int discountedprice, int quantity)
+        private void passdata(int proid, string batchno, string proname, double unitprice, double discountedprice, int quantity, double totalprice, DateTime expirydate)
         {
             string connectionstr = dbconnection.Instance.ConnectionString;
 
@@ -115,19 +145,35 @@ namespace CSharp_POS_System.src.apps
                 {
                     conn.Open();
 
-                    string sqlcmd = "Insert into tempdata values(@ProID, @ProName, @UnitPrice, @Discount, @Quantity)";
+                    string sqlcmd = "Insert into tempdata values(@ProID,@BatchNumber, @ProName, @UnitPrice, @Discount, @Quantity, @TotalPrice, @ExpiryDate)";
 
                     try
                     {
                         using(SqlCommand cmd = new SqlCommand(sqlcmd, conn))
                         {
                             cmd.Parameters.AddWithValue("@ProID", proid);
+                            cmd.Parameters.AddWithValue("@BatchNumber", batchno);
                             cmd.Parameters.AddWithValue("@ProName", proname);
                             cmd.Parameters.AddWithValue("@UnitPrice", unitprice);
                             cmd.Parameters.AddWithValue("@Discount", discountedprice);
                             cmd.Parameters.AddWithValue("@Quantity", quantity);
+                            cmd.Parameters.AddWithValue("@TotalPrice", totalprice);
+                            cmd.Parameters.AddWithValue("@ExpiryDate", expirydate);
 
-                            cmd.ExecuteNonQuery();
+                            int rowsaffected = cmd.ExecuteNonQuery();
+
+                            if (rowsaffected > 0)
+                            {
+                                label11.Text = $"Successfully inserted {proid}";
+                                label11.ForeColor = Color.Green;
+                            }
+                            else
+                            {
+                                label11.Text = $"Operation failed to add {proid}";
+                                label11.ForeColor = Color.Red;
+                            }
+                            
+                            
                         }
                     } catch(Exception ex)
                     {
@@ -181,6 +227,45 @@ namespace CSharp_POS_System.src.apps
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+            int ProductNumber = int.Parse(textBox1.Text);
+            searchbatchnumbers(ProductNumber);
+
+            textBox2.Text = "";
+            textBox3.Text = string.Empty;
+            textBox4.Text = string.Empty;
+            textBox5.Text = string.Empty;
+            comboBox1.SelectedIndex = 0;
+            textBox7.Text = string.Empty;   
+            textBox8.Text = string.Empty;
+            
+        }
+
+        private void searchbatchnumbers(int ProductID)
+        {
+            using(SqlConnection conn = new SqlConnection(dbconnection.Instance.ConnectionString))
+            {
+                conn.Open();
+                string sqlcmd = "Select BatchNo from StockUpdateTable where ProductID = @ProductId";
+
+                using (SqlCommand cmd = new SqlCommand(sqlcmd, conn))
+                {
+                    cmd.Parameters.AddWithValue("@ProductId", ProductID);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    { 
+                        comboBox1.Items.Clear();
+                        
+                        while (reader.Read())
+                        {
+                            comboBox1.Items.Add(reader["BatchNo"].ToString());
+                        }
+                    }
+                }
+                conn.Close();
             }
         }
     }
