@@ -32,8 +32,6 @@
             this.rjPanel2 = new RoundedPanelClass.RJPanel();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.rjButton4 = new CustomControls.RJControls.RJButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -57,8 +55,6 @@
             this.rjPanel2.BorderRadius = 30;
             this.rjPanel2.Controls.Add(this.rjButton2);
             this.rjPanel2.Controls.Add(this.rjButton1);
-            this.rjPanel2.Controls.Add(this.label1);
-            this.rjPanel2.Controls.Add(this.textBox1);
             this.rjPanel2.Controls.Add(this.rjButton4);
             this.rjPanel2.ForeColor = System.Drawing.Color.White;
             this.rjPanel2.GradientAngle = 90F;
@@ -114,26 +110,6 @@
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click_1);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label1.Location = new System.Drawing.Point(1277, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 32);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Net Total : ";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1446, 42);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(347, 39);
-            this.textBox1.TabIndex = 13;
-            // 
             // rjButton4
             // 
             this.rjButton4.BackColor = System.Drawing.Color.DimGray;
@@ -179,7 +155,6 @@
             this.Load += new System.EventHandler(this.Checkoutdashboard_Load);
             this.panel1.ResumeLayout(false);
             this.rjPanel2.ResumeLayout(false);
-            this.rjPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -189,8 +164,6 @@
         private RoundedPanelClass.RJPanel rjPanel2;
         private CustomControls.RJControls.RJButton rjButton4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
         private CustomControls.RJControls.RJButton rjButton2;
         private CustomControls.RJControls.RJButton rjButton1;
     }

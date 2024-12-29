@@ -13,10 +13,13 @@ namespace CSharp_POS_System.src.apps.dashboards
 {
     public partial class Checkoutdashboard : Form
     {
+        
         public Checkoutdashboard()
         {
             InitializeComponent();
         }
+
+        
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {

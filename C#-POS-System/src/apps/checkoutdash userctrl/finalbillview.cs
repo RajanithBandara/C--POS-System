@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
+using WindowsAppProject.Apps;
 
 namespace CSharp_POS_System.src.apps
 {
@@ -13,13 +14,65 @@ namespace CSharp_POS_System.src.apps
         public finalbillview()
         {
             InitializeComponent();
+            finalpriceget();
+            final_discountget();
             datagridview();
             LoadDataFromDatabase();
         }
 
+        private void finalpriceget()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(dbconnection.Instance.ConnectionString))
+                {
+                    conn.Open();
+
+                    string sqlcmd = "Select dbo.take_sum_finalbill()";
+                    SqlCommand cmd = new SqlCommand(sqlcmd, conn);
+                    var resul = cmd.ExecuteScalar();
+
+                    if (resul != null)
+                    {
+                        double totalsum = Convert.ToDouble(resul);
+                        totalprice.Text = totalsum.ToString();
+                    }
+                    else
+                    {
+                        totalprice.Text = "0.00";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+        }
+
+        private void final_discountget()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(dbconnection.Instance.ConnectionString))
+                {
+                    conn.Open();
+                    string sqlcmd = "Select dbo.take_sum_discounts()";
+                    SqlCommand cmd = new SqlCommand(sqlcmd, conn);
+                    var result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        double totaldiscount = Convert.ToDouble(result);
+                        totalDiscount.Text = totaldiscount.ToString();
+                    }
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }   
+        }
+
         private void kryptonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Handle cell click events if necessary
         }
 
         private void datagridview()
@@ -32,26 +85,26 @@ namespace CSharp_POS_System.src.apps
             var col1 = kryptonDataGridView1.Columns.Add("ProductID", "Product ID");
             kryptonDataGridView1.Columns[col1].Width = widthoff / 10;
 
-            var col2 = kryptonDataGridView1.Columns.Add("ProductName", "Product Name");
-            kryptonDataGridView1.Columns[col2].Width = widthoff / 4;
+            var col2 = kryptonDataGridView1.Columns.Add("ProductName", "Batch Number");
+            kryptonDataGridView1.Columns[col2].Width = widthoff / 8;
 
-            var col3 = kryptonDataGridView1.Columns.Add("UnitPrice", "Unit Price");
-            kryptonDataGridView1.Columns[col3].Width = widthoff / 11;
+            var col3 = kryptonDataGridView1.Columns.Add("UnitPrice", "Product Name");
+            kryptonDataGridView1.Columns[col3].Width = widthoff / 5;
 
-            var col4 = kryptonDataGridView1.Columns.Add("Quantity", "Quantity");
+            var col4 = kryptonDataGridView1.Columns.Add("Quantity", "Unit Price");
             kryptonDataGridView1.Columns[col4].Width = widthoff / 10;
 
-            var col5 = kryptonDataGridView1.Columns.Add("TotalPrice", "Total Price");
+            var col5 = kryptonDataGridView1.Columns.Add("TotalPrice", "Quantity");
             kryptonDataGridView1.Columns[col5].Width = widthoff / 10;
 
-            var col6 = kryptonDataGridView1.Columns.Add("DiscountDetail", "Discount Detail");
-            kryptonDataGridView1.Columns[col6].Width = widthoff / 9;
+            var col6 = kryptonDataGridView1.Columns.Add("DiscountDetail", "Total Price");
+            kryptonDataGridView1.Columns[col6].Width = widthoff / 10;
 
-            var col7 = kryptonDataGridView1.Columns.Add("TotalDiscount", "Total Discount");
+            var col7 = kryptonDataGridView1.Columns.Add("TotalDiscount", "Discount Added");
             kryptonDataGridView1.Columns[col7].Width = widthoff / 8;
 
             var col8 = kryptonDataGridView1.Columns.Add("NetPrice", "Net Price");
-            kryptonDataGridView1.Columns[col8].Width = widthoff / 12;
+            kryptonDataGridView1.Columns[col8].Width = widthoff / 9;
         }
 
         private void LoadDataFromDatabase()
@@ -61,25 +114,34 @@ namespace CSharp_POS_System.src.apps
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "SELECT * From FinalBillView";
+
+                    string query = "SELECT * FROM FinalBillView";
 
                     SqlCommand command = new SqlCommand(query, connection);
                     SqlDataAdapter adapter = new SqlDataAdapter(command);
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
 
+                    kryptonDataGridView1.Rows.Clear();
+
                     foreach (DataRow row in dataTable.Rows)
                     {
                         double unitPrice = Convert.ToDouble(row["UnitPrice"]);
                         int quantity = Convert.ToInt32(row["Quantity"]);
                         double totalPrice = unitPrice * quantity;
-                        double totalDiscount = Convert.ToDouble(row["TotalDiscount"]);
+                        double totalDiscount = Convert.ToDouble(row["DiscountedPrice"]);
                         double netPrice = totalPrice - totalDiscount;
 
                         kryptonDataGridView1.Rows.Add(
-                            row["ProductID"], row["ProductName"], unitPrice,
-                            quantity, totalPrice, row["DiscountDetail"],
-                            totalDiscount, netPrice);
+                            row["ProductID"],       
+                            row["BatchNumber"],     
+                            row["ProductName"],     
+                            unitPrice,              
+                            quantity,               
+                            totalPrice,             
+                            totalDiscount,          
+                            netPrice                
+                        );
                     }
                 }
             }
@@ -92,6 +154,7 @@ namespace CSharp_POS_System.src.apps
                 MessageBox.Show($"Error loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void SaveDataToDatabase()
         {
