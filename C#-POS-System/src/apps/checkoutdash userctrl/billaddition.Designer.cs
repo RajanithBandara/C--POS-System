@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.rjPanel1 = new RoundedPanelClass.RJPanel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.rjButton3 = new CustomControls.RJControls.RJButton();
             this.label11 = new System.Windows.Forms.Label();
@@ -59,6 +61,8 @@
             // 
             this.rjPanel1.BackColor = System.Drawing.Color.DarkGray;
             this.rjPanel1.BorderRadius = 30;
+            this.rjPanel1.Controls.Add(this.label12);
+            this.rjPanel1.Controls.Add(this.textBox6);
             this.rjPanel1.Controls.Add(this.comboBox1);
             this.rjPanel1.Controls.Add(this.rjButton3);
             this.rjPanel1.Controls.Add(this.label11);
@@ -91,6 +95,27 @@
             this.rjPanel1.Name = "rjPanel1";
             this.rjPanel1.Size = new System.Drawing.Size(1336, 779);
             this.rjPanel1.TabIndex = 5;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label12.Location = new System.Drawing.Point(1031, 677);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(163, 32);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "Net Total : ";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(947, 721);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(347, 39);
+            this.textBox6.TabIndex = 25;
             // 
             // comboBox1
             // 
@@ -425,5 +450,7 @@
         private System.Windows.Forms.Label label11;
         private CustomControls.RJControls.RJButton rjButton3;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }

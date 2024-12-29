@@ -44,28 +44,31 @@ namespace CSharp_POS_System.src.apps.Admin_panel_uctrl
 
             using (SqlConnection conn = new SqlConnection(connectionstr))
             {
-                string sqlcmd = "insert into UserTable values(@UID, @UName, @Pwd, @EID)";
+                string procedureName = "AddUserData";
 
                 conn.Open();
 
                 try
                 {
-                    using (SqlCommand cmd = new SqlCommand(sqlcmd, conn))
+                    using (SqlCommand cmd = new SqlCommand(procedureName, conn))
                     {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
                         cmd.Parameters.AddWithValue("@UID", uid);
                         cmd.Parameters.AddWithValue("@UName", username);
                         cmd.Parameters.AddWithValue("@Pwd", password);
                         cmd.Parameters.AddWithValue("@EID", eid);
 
                         int rowsaffect = cmd.ExecuteNonQuery();
-                        MessageBox.Show($"Data Inserted into {rowsaffect}  column successfully");
+                        MessageBox.Show($"Data inserted successfully into {rowsaffect} row(s).");
                     }
-                } catch (Exception ex)
-                {
-                    MessageBox.Show("Error", ex.Message);
                 }
-
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}", "Insertion Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
+
     }
 }

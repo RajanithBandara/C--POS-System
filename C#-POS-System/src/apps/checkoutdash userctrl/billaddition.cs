@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsAppProject.Apps;
 using ClosedXML.Excel;
+using CSharp_POS_System.src.apps.dashboards;
 
 
 namespace CSharp_POS_System.src.apps
@@ -125,8 +126,10 @@ namespace CSharp_POS_System.src.apps
             double TotalPrice = (UnitPrice - DiscountPrice) * Quantity;
             DateTime ExpiryDate = Convert.ToDateTime(textBox4.Text);
 
+
             try
             {
+                net_totaldisplay();
                 passdata(ProductID, BatchNumber, ProductName, UnitPrice, DiscountPrice, Quantity, TotalPrice, ExpiryDate);
 
             } catch (Exception ex)
@@ -134,6 +137,27 @@ namespace CSharp_POS_System.src.apps
                 MessageBox.Show($"Error occured {ex}");
             }
 
+            net_totaldisplay();
+
+        }
+
+        private void net_totaldisplay()
+        {
+            using(SqlConnection conn = new SqlConnection(dbconnection.Instance.ConnectionString))
+            {
+                conn.Open();
+                string sqlcmd = "Select dbo.take_nettotal()";
+                SqlCommand cmd = new SqlCommand(sqlcmd, conn);
+                
+                var net_total = cmd.ExecuteScalar();
+
+                if(net_total != null)
+                {
+                    textBox6.Text = net_total.ToString();
+                }
+            }
+
+            
         }
         private void passdata(int proid, string batchno, string proname, double unitprice, double discountedprice, int quantity, double totalprice, DateTime expirydate)
         {

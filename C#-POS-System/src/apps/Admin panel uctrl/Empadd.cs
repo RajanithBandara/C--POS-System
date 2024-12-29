@@ -41,19 +41,19 @@ namespace CSharp_POS_System.src.apps.Admin_panel_uctrl
             using (SqlConnection conn = new SqlConnection(connectionstr))
             {
                 conn.Open();
-
-                string sqlcmd = "Insert into EmployeeTable values(@EID, @EName, @Eposition)";
+                string procedureName = "AddEmployeeData";
 
                 try
                 {
-                    using (SqlCommand cmd = new SqlCommand(sqlcmd, conn))
+                    using (SqlCommand cmd = new SqlCommand(procedureName, conn))
                     {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
                         cmd.Parameters.AddWithValue("@EID", empid);
                         cmd.Parameters.AddWithValue("@EName", empname);
                         cmd.Parameters.AddWithValue("@Eposition", position);
 
                         int rowsaffect = cmd.ExecuteNonQuery();
-
                         MessageBox.Show($"{rowsaffect} rows affected successfully.");
                     }
                 }
@@ -63,5 +63,6 @@ namespace CSharp_POS_System.src.apps.Admin_panel_uctrl
                 }
             }
         }
+
     }
 }
