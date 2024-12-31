@@ -238,7 +238,7 @@
 
         #endregion
 
-        private RoundedPanelClass.RJPanel Update;
+        private new RoundedPanelClass.RJPanel Update;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -246,7 +246,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox BrandName;
-        private System.Windows.Forms.TextBox ProductName;
+        private new System.Windows.Forms.TextBox ProductName;
         private CustomControls.RJControls.RJButton Clear;
         private CustomControls.RJControls.RJButton Submit;
         private System.Windows.Forms.ComboBox ProductCategory;

@@ -1,15 +1,7 @@
 ﻿using Krypton.Toolkit;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Data.SqlTypes;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsAppProject.Apps;
 
@@ -17,126 +9,254 @@ namespace CSharp_POS_System.src.apps.inventorydash_userctrl
 {
     public partial class inventoryadd : UserControl
     {
+        private InventoryRepository _repository;
+
         public inventoryadd()
         {
             InitializeComponent();
-            categoryload();
+            _repository = new InventoryRepository();
+            textBox1.TextChanged += textBox1_TextChanged; // Attach event for ProductID
         }
 
         private void inventoryadd_Load(object sender, EventArgs e)
         {
-
+            // Additional initialization logic can go here if needed.
         }
 
-        private void categoryload()
+        private void AddInventoryData()
         {
-            string connectionstr = dbconnection.Instance.ConnectionString;
-
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionstr))
-                {
-                    string sqlcmd = "Select CategoryType from CategoryTable";
+                // Validate inputs
+                if (!int.TryParse(textBox1.Text, out int productId) || productId <= 0)
+                    throw new Exception("Invalid Product ID.");
 
-                    conn.Open();
+                if (!int.TryParse(textBox5.Text, out int batchNo) || batchNo <= 0)
+                    throw new Exception("Invalid Batch Number.");
 
-                    using (SqlCommand command = new SqlCommand(sqlcmd, conn))
-                    {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            comboBox1.Items.Clear();
+                if (!int.TryParse(textBox6.Text, out int quantity) || quantity <= 0)
+                    throw new Exception("Invalid Quantity.");
 
-                            while (reader.Read())
-                            {
-                                comboBox1.Items.Add(reader["CategoryType"].ToString());
-                            }
-                        }
-                    }
+                if (!double.TryParse(textBox7.Text, out double unitPrice) || unitPrice <= 0)
+                    throw new Exception("Invalid Unit Price.");
 
-                    conn.Close();
-                }
+                if (!int.TryParse(textBox9.Text, out int supplierId) || supplierId <= 0)
+                    throw new Exception("Invalid Supplier ID.");
+
+                if (!int.TryParse(textBox11.Text, out int damagedCount) || damagedCount < 0)
+                    throw new Exception("Invalid Damaged Count.");
+
+                DateTime expiryDate = kryptonDateTimePicker1.Value;
+                DateTime suppliedDate = kryptonDateTimePicker2.Value;
+
+                // Call repository methods to add the data
+                _repository.AddSupplyDetails(supplierId, suppliedDate);
+                _repository.AddStockUpdate(productId, batchNo, expiryDate, unitPrice, quantity, damagedCount);
+                _repository.AddInventory(productId, quantity);
+
+                MessageBox.Show("Inventory data added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show($"Error adding inventory data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
-        private void addinventorydata()
+
+        // Triggered when ProductID text box changes (automatically search and populate data)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            int PID = Convert.ToInt32(textBox1.Text);
-            int BNo = Convert.ToInt32(textBox5.Text);
-            int Qty = Convert.ToInt32(textBox6.Text);
-            double Price = Convert.ToDouble(textBox7.Text);
-            DateTime ExDate = kryptonDateTimePicker1.Value;
-            int SupID = Convert.ToInt32(textBox9.Text);
-            DateTime SupDate = kryptonDateTimePicker2.Value;
-            int Damage = Convert.ToInt32(textBox11.Text);
-
-
-            string connectionstr = dbconnection.Instance.ConnectionString;
-            using (SqlConnection conn = new SqlConnection(connectionstr))
+            if (int.TryParse(textBox1.Text, out int productId))
             {
-                string sqlcmd1 = "insert into SupplyDetails(SupplierID, SuppliedDate) values(@SupID, @SupDate)";
-                string sqlcmd2 = "insert into StockUpdateTable(ProductID, BatchNo, ExpiryDate, UnitPrice, Quantity, DamagedCount) values(@PID, @BNo, @ExDate, @Price, @Qty, @Damage)";
-                string sqlcmd3 = "insert into InventoryTable (@PID, @Qty)";
-
-                conn.Open();
-
                 try
                 {
-                    using (SqlCommand cmd1 = new SqlCommand(sqlcmd1, conn))
-                    {
-                        cmd1.Parameters.AddWithValue("@SupID", SupID);
-                        cmd1.Parameters.AddWithValue("@SupDate", SupDate);
-
-                        cmd1.ExecuteNonQuery();
-                    }
-                    using (SqlCommand cmd2 = new SqlCommand(sqlcmd2, conn))
-                    {
-                        cmd2.Parameters.AddWithValue("@PID", PID);
-                        cmd2.Parameters.AddWithValue("@BNo", BNo);
-                        cmd2.Parameters.AddWithValue("@ExDate", ExDate);
-                        cmd2.Parameters.AddWithValue("@Price", Price);
-                        cmd2.Parameters.AddWithValue("@Qty", Qty);
-                        cmd2.Parameters.AddWithValue("@Damage", Damage);
-
-                        cmd2.ExecuteNonQuery();
-                    }
-                    using (SqlCommand cmd3 = new SqlCommand(sqlcmd3, conn))
-                    {
-                        cmd3.Parameters.AddWithValue("@PID", PID);
-                        cmd3.Parameters.AddWithValue("@Qty", Qty);
-
-                        cmd3.ExecuteNonQuery();
-
-                    }
+                    // Fetch product details when ProductID is valid
+                    DataRow productInfo = _repository.GetProductDetails(productId);
+                    PopulateProductFields(productInfo);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error", ex.Message);
+                    MessageBox.Show($"Error fetching product details: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
-            
+            else
+            {
+                ClearProductFields(); // Clear the fields if ProductID is invalid
+            }
         }
 
-        private void rjButton2_Click(object sender, EventArgs e)
+        // Method to get product details by ProductID
+        public DataRow GetProductDetails(int productId)
         {
-            textBox1.Text = string.Empty;
-            textBox2.Text = string.Empty;   
-            textBox3.Text = string.Empty;
-            textBox5.Text = string.Empty;
-            textBox6.Text = string.Empty;
-            textBox7.Text = string.Empty;
-            textBox9.Text = string.Empty;  
-            textBox11.Text = string.Empty;
-            comboBox1.SelectedIndex = -1;
+            string query = "SELECT ProductName, BrandName, [Category Type] FROM ProductTable WHERE ProductID = @ProductID";
+            DataTable dt = _repository.ExecuteQuery(query, new SqlParameter("@ProductID", productId));
+            return dt.Rows.Count > 0 ? dt.Rows[0] : null;
+        }
+
+        // This is the search button click handler, if needed for manual search.
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Validate the Product ID input
+                if (!int.TryParse(textBox1.Text, out int productId) || productId <= 0)
+                {
+                    MessageBox.Show("Please enter a valid Product ID.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Exit early if the input is invalid
+                }
+
+                // Fetch product details
+                DataRow productInfo = _repository.GetProductDetails(productId);
+
+                // Populate the product fields with the fetched data
+                PopulateProductFields(productInfo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error fetching product details: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Populate fields with product information
+        private void PopulateProductFields(DataRow productInfo)
+        {
+            if (productInfo != null)
+            {
+                // Populate fields with the fetched data
+                productname.Text = productInfo["ProductName"].ToString();
+                brandname.Text = productInfo["BrandName"].ToString();
+                productcategory.Text = productInfo["Category Type"].ToString();
+            }
+            else
+            {
+                // Handle case where no product was found
+                MessageBox.Show("Product not found.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearProductFields();
+            }
+        }
+
+
+        // Clear fields if no product found or reset
+        private void ClearProductFields()
+        {
+            productname.Text = string.Empty;
+            brandname.Text = string.Empty;
+            productcategory.Text = string.Empty;
         }
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
+            AddInventoryData();
+        }
 
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!int.TryParse(textBox1.Text, out int productId))
+                    throw new Exception("Invalid Product ID.");
+
+                _repository.DeleteInventoryData(productId);
+                MessageBox.Show("Inventory data deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error deleting inventory data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    }
+
+    public class InventoryRepository
+    {
+        private readonly string _connectionString;
+
+        public InventoryRepository()
+        {
+            _connectionString = dbconnection.Instance.ConnectionString;
+        }
+
+        // Method to add supply details
+        public void AddSupplyDetails(int supplierId, DateTime suppliedDate)
+        {
+            string query = "INSERT INTO SupplyDetails (SupplierID, SuppliedDate) VALUES (@SupplierID, @SuppliedDate)";
+            ExecuteNonQuery(query, new SqlParameter("@SupplierID", supplierId), new SqlParameter("@SuppliedDate", suppliedDate));
+        }
+
+        // Method to add stock update
+        public void AddStockUpdate(int productId, int batchNo, DateTime expiryDate, double unitPrice, int quantity, int damagedCount)
+        {
+            string query = "INSERT INTO StockUpdateTable (ProductID, BatchNo, ExpiryDate, UnitPrice, Quantity, DamagedCount) VALUES (@ProductID, @BatchNo, @ExpiryDate, @UnitPrice, @Quantity, @DamagedCount)";
+            ExecuteNonQuery(query,
+                new SqlParameter("@ProductID", productId),
+                new SqlParameter("@BatchNo", batchNo),
+                new SqlParameter("@ExpiryDate", expiryDate),
+                new SqlParameter("@UnitPrice", unitPrice),
+                new SqlParameter("@Quantity", quantity),
+                new SqlParameter("@DamagedCount", damagedCount));
+        }
+
+        // Method to add inventory
+        public void AddInventory(int productId, int quantity)
+        {
+            string query = "INSERT INTO InventoryTable (ProductID, Quantity) VALUES (@ProductID, @Quantity)";
+            ExecuteNonQuery(query, new SqlParameter("@ProductID", productId), new SqlParameter("@Quantity", quantity));
+        }
+
+        // Method to delete inventory data
+        public void DeleteInventoryData(int productId)
+        {
+            string query = "DELETE FROM InventoryTable WHERE ProductID = @ProductID";
+            ExecuteNonQuery(query, new SqlParameter("@ProductID", productId));
+        }
+
+        public DataRow GetProductDetails(int productId)
+        {
+            // Query to join ProductTable and CategoryTable to get the product details and category name
+            string query = @"
+        SELECT p.ProductName, p.BrandName, c.CategoryName AS 'Category Type'
+        FROM ProductTable p
+        JOIN CategoryTable c ON p.CategoryID = c.CategoryID
+        WHERE p.ProductID = @ProductID";
+
+            DataTable dt = ExecuteQuery(query, new SqlParameter("@ProductID", productId));
+            return dt.Rows.Count > 0 ? dt.Rows[0] : null; // Return the first row if exists, otherwise null
+        }
+
+
+
+
+        // Method to execute a query and return a DataTable
+        public DataTable ExecuteQuery(string query, params SqlParameter[] parameters)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    if (parameters != null)
+                        cmd.Parameters.AddRange(parameters);
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dt);
+                    }
+                }
+            }
+            return dt;
+        }
+
+        // Method to execute a non-query command
+        private void ExecuteNonQuery(string query, params SqlParameter[] parameters)
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    if (parameters != null)
+                        cmd.Parameters.AddRange(parameters);
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
     }
 }

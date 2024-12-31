@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.rjPanel1 = new RoundedPanelClass.RJPanel();
+            this.productcategory = new System.Windows.Forms.TextBox();
+            this.rjButton3 = new CustomControls.RJControls.RJButton();
             this.kryptonDateTimePicker2 = new Krypton.Toolkit.KryptonDateTimePicker();
             this.kryptonDateTimePicker1 = new Krypton.Toolkit.KryptonDateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -39,8 +40,8 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.brandname = new System.Windows.Forms.TextBox();
+            this.productname = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -61,9 +62,10 @@
             // 
             this.rjPanel1.BackColor = System.Drawing.Color.DarkGray;
             this.rjPanel1.BorderRadius = 30;
+            this.rjPanel1.Controls.Add(this.productcategory);
+            this.rjPanel1.Controls.Add(this.rjButton3);
             this.rjPanel1.Controls.Add(this.kryptonDateTimePicker2);
             this.rjPanel1.Controls.Add(this.kryptonDateTimePicker1);
-            this.rjPanel1.Controls.Add(this.comboBox1);
             this.rjPanel1.Controls.Add(this.rjButton2);
             this.rjPanel1.Controls.Add(this.rjButton1);
             this.rjPanel1.Controls.Add(this.textBox11);
@@ -71,8 +73,8 @@
             this.rjPanel1.Controls.Add(this.textBox7);
             this.rjPanel1.Controls.Add(this.textBox6);
             this.rjPanel1.Controls.Add(this.textBox5);
-            this.rjPanel1.Controls.Add(this.textBox3);
-            this.rjPanel1.Controls.Add(this.textBox2);
+            this.rjPanel1.Controls.Add(this.brandname);
+            this.rjPanel1.Controls.Add(this.productname);
             this.rjPanel1.Controls.Add(this.textBox1);
             this.rjPanel1.Controls.Add(this.label12);
             this.rjPanel1.Controls.Add(this.label11);
@@ -95,6 +97,35 @@
             this.rjPanel1.Size = new System.Drawing.Size(883, 723);
             this.rjPanel1.TabIndex = 0;
             // 
+            // productcategory
+            // 
+            this.productcategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.productcategory.Location = new System.Drawing.Point(403, 247);
+            this.productcategory.Name = "productcategory";
+            this.productcategory.Size = new System.Drawing.Size(296, 30);
+            this.productcategory.TabIndex = 29;
+
+            // 
+            // rjButton3
+            // 
+            this.rjButton3.BackColor = System.Drawing.Color.DimGray;
+            this.rjButton3.BackgroundColor = System.Drawing.Color.DimGray;
+            this.rjButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton3.BorderRadius = 6;
+            this.rjButton3.BorderSize = 0;
+            this.rjButton3.FlatAppearance.BorderSize = 0;
+            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.rjButton3.ForeColor = System.Drawing.Color.White;
+            this.rjButton3.Location = new System.Drawing.Point(569, 92);
+            this.rjButton3.Name = "rjButton3";
+            this.rjButton3.Size = new System.Drawing.Size(130, 30);
+            this.rjButton3.TabIndex = 28;
+            this.rjButton3.Text = "Search";
+            this.rjButton3.TextColor = System.Drawing.Color.White;
+            this.rjButton3.UseVisualStyleBackColor = false;
+            this.rjButton3.Click += new System.EventHandler(this.rjButton3_Click);
+            // 
             // kryptonDateTimePicker2
             // 
             this.kryptonDateTimePicker2.CalendarTodayDate = new System.DateTime(2024, 12, 23, 0, 0, 0, 0);
@@ -111,17 +142,6 @@
             this.kryptonDateTimePicker1.Size = new System.Drawing.Size(296, 25);
             this.kryptonDateTimePicker1.TabIndex = 26;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(403, 245);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(296, 33);
-            this.comboBox1.TabIndex = 25;
-            // 
             // rjButton2
             // 
             this.rjButton2.BackColor = System.Drawing.Color.Tomato;
@@ -137,7 +157,7 @@
             this.rjButton2.Name = "rjButton2";
             this.rjButton2.Size = new System.Drawing.Size(150, 40);
             this.rjButton2.TabIndex = 24;
-            this.rjButton2.Text = "Clear";
+            this.rjButton2.Text = "Remove";
             this.rjButton2.TextColor = System.Drawing.Color.White;
             this.rjButton2.UseVisualStyleBackColor = false;
             this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
@@ -202,21 +222,21 @@
             this.textBox5.Size = new System.Drawing.Size(296, 30);
             this.textBox5.TabIndex = 16;
             // 
-            // textBox3
+            // brandname
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox3.Location = new System.Drawing.Point(403, 194);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(296, 30);
-            this.textBox3.TabIndex = 15;
+            this.brandname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.brandname.Location = new System.Drawing.Point(403, 194);
+            this.brandname.Name = "brandname";
+            this.brandname.Size = new System.Drawing.Size(296, 30);
+            this.brandname.TabIndex = 15;
             // 
-            // textBox2
+            // productname
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(403, 143);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(296, 30);
-            this.textBox2.TabIndex = 13;
+            this.productname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.productname.Location = new System.Drawing.Point(403, 143);
+            this.productname.Name = "productname";
+            this.productname.Size = new System.Drawing.Size(296, 30);
+            this.productname.TabIndex = 13;
             // 
             // textBox1
             // 
@@ -388,18 +408,19 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox productname;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox brandname;
         private System.Windows.Forms.TextBox textBox11;
         private CustomControls.RJControls.RJButton rjButton2;
         private CustomControls.RJControls.RJButton rjButton1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private Krypton.Toolkit.KryptonDateTimePicker kryptonDateTimePicker1;
         private Krypton.Toolkit.KryptonDateTimePicker kryptonDateTimePicker2;
+        private CustomControls.RJControls.RJButton rjButton3;
+        private System.Windows.Forms.TextBox productcategory;
     }
 }
