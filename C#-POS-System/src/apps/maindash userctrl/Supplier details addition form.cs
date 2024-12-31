@@ -49,21 +49,23 @@ namespace C__POS_System.src.apps
 
         private void sendata(int id, string name, string contact, string email, string address)
         {
-            string connectionstr = "Server=localhost,1433;Database=posdb;User Id=sa;Password=haruma123#;";
-            string sqlcmd = "INSERT INTO SupplierTable (SupplierID, SupplierName, ContactNo, EmailAddress, PostalAddress) " +
-                            "VALUES (@SupplierID, @SupplierName, @ContactNo, @EmailAddress, @PostalAddress)";
+            string connectionstr = "Server=localhost,1433;Database=posdb;User Id=sa;Password=password123#";
+            string sqlcmd = "SupplierDetails";
 
             try
             {
                 using(SqlConnection conn = new SqlConnection(connectionstr))
                 {
                     SqlCommand cmd = new SqlCommand(sqlcmd, conn);
-
-                    cmd.Parameters.AddWithValue("@SupplierID", id);
-                    cmd.Parameters.AddWithValue("@SupplierName", name);
-                    cmd.Parameters.AddWithValue("@ContactNo", contact);
-                    cmd.Parameters.AddWithValue("@EmailAddress", email);
-                    cmd.Parameters.AddWithValue("@PostalAddress", address);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    
+                    cmd.Parameters.AddWithValue("@SID", id);
+                    cmd.Parameters.AddWithValue("@SName", name);
+                    cmd.Parameters.AddWithValue("@Scon", contact);
+                    cmd.Parameters.AddWithValue("@SEAddress", email);
+                    cmd.Parameters.AddWithValue("@SPAddress", address);
+                    cmd.Parameters.AddWithValue("@SAs", address);
+                    cmd.Parameters.AddWithValue("@Stype", address);
 
                     conn.Open();
 
