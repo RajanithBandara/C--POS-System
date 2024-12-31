@@ -156,53 +156,7 @@ namespace CSharp_POS_System.src.apps
         }
 
 
-        private void SaveDataToDatabase()
-        {
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-
-                    foreach (DataGridViewRow row in kryptonDataGridView1.Rows)
-                    {
-                        if (row.IsNewRow) continue;
-
-                        string query = "INSERT INTO ProductTable (ProductID, ProductName, UnitPrice, Quantity, TotalPrice, DiscountDetail, TotalDiscount, NetPrice) " +
-                                       "VALUES (@ProductID, @ProductName, @UnitPrice, @Quantity, @TotalPrice, @DiscountDetail, @TotalDiscount, @NetPrice)";
-
-                        SqlCommand command = new SqlCommand(query, connection);
-                        command.Parameters.AddWithValue("@ProductID", row.Cells["ProductID"].Value ?? DBNull.Value);
-                        command.Parameters.AddWithValue("@ProductName", row.Cells["ProductName"].Value ?? DBNull.Value);
-                        command.Parameters.AddWithValue("@UnitPrice", row.Cells["UnitPrice"].Value ?? DBNull.Value);
-                        command.Parameters.AddWithValue("@Quantity", row.Cells["Quantity"].Value ?? DBNull.Value);
-
-                        double unitPrice = Convert.ToDouble(row.Cells["UnitPrice"].Value);
-                        int quantity = Convert.ToInt32(row.Cells["Quantity"].Value);
-                        double totalPrice = unitPrice * quantity;
-                        double totalDiscount = Convert.ToDouble(row.Cells["TotalDiscount"].Value);
-                        double netPrice = totalPrice - totalDiscount;
-
-                        command.Parameters.AddWithValue("@TotalPrice", totalPrice);
-                        command.Parameters.AddWithValue("@DiscountDetail", row.Cells["DiscountDetail"].Value ?? DBNull.Value);
-                        command.Parameters.AddWithValue("@TotalDiscount", totalDiscount);
-                        command.Parameters.AddWithValue("@NetPrice", netPrice);
-
-                        command.ExecuteNonQuery();
-                    }
-                }
-
-                MessageBox.Show("Data saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show($"SQL Error: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error saving data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
 
         private void kryptonDataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -241,6 +195,11 @@ namespace CSharp_POS_System.src.apps
 
                 totalDiscount.Text = totalSum.ToString();
             }
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
