@@ -44,11 +44,29 @@
     <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.Licensing.6.0.4\lib\net48\Bunifu.Licensing.dll</HintPath>
     </Reference>
+    <Reference Include="ClosedXML, Version=0.104.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.104.2\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML.Parser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1d5f7376574c51ec, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.Parser.1.2.0\lib\netstandard2.0\ClosedXML.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.3.1.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.Framework.3.1.1\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
     <Reference Include="Krypton.Toolkit, Version=90.24.11.317, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <HintPath>..\packages\Krypton.Toolkit.90.24.11.317\lib\net48\Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Data.SqlClient, Version=5.0.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Data.SqlClient.5.2.2\lib\net462\Microsoft.Data.SqlClient.dll</HintPath>
@@ -80,8 +98,14 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="RBush, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RBush.4.0.0\lib\net47\RBush.dll</HintPath>
+    </Reference>
     <Reference Include="RestSharp, Version=110.2.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -173,6 +197,12 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\apps\Admin panel uctrl\Empadd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\apps\Admin panel uctrl\Empadd.Designer.cs">
+      <DependentUpon>Empadd.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\apps\Admin panel uctrl\UserSettings.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,16 +215,16 @@
     <Compile Include="src\apps\Admin panel uctrl\UserAddition.Designer.cs">
       <DependentUpon>UserAddition.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\apps\billaddition.cs">
+    <Compile Include="src\apps\checkoutdash userctrl\billaddition.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\apps\billaddition.Designer.cs">
+    <Compile Include="src\apps\checkoutdash userctrl\billaddition.Designer.cs">
       <DependentUpon>billaddition.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\apps\customerdetails.cs">
+    <Compile Include="src\apps\checkoutdash userctrl\customerdetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\apps\customerdetails.Designer.cs">
+    <Compile Include="src\apps\checkoutdash userctrl\customerdetails.Designer.cs">
       <DependentUpon>customerdetails.cs</DependentUpon>
     </Compile>
     <Compile Include="src\apps\dashboards\Admin panel.cs">
@@ -221,16 +251,28 @@
     <Compile Include="src\apps\dashboards\maindashboard.Designer.cs">
       <DependentUpon>maindashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\apps\discountadd.cs">
+    <Compile Include="src\apps\inventorydash userctrl\inventory view.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\apps\discountadd.Designer.cs">
+    <Compile Include="src\apps\inventorydash userctrl\inventory view.Designer.cs">
+      <DependentUpon>inventory view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\apps\inventorydash userctrl\productaddform.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\apps\inventorydash userctrl\productaddform.Designer.cs">
+      <DependentUpon>productaddform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\apps\maindash userctrl\discountadd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\apps\maindash userctrl\discountadd.Designer.cs">
       <DependentUpon>discountadd.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\apps\finalbillview.cs">
+    <Compile Include="src\apps\checkoutdash userctrl\finalbillview.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\apps\finalbillview.Designer.cs">
+    <Compile Include="src\apps\checkoutdash userctrl\finalbillview.Designer.cs">
       <DependentUpon>finalbillview.cs</DependentUpon>
     </Compile>
     <Compile Include="src\apps\inventorydash userctrl\inventoryadd.cs">
@@ -245,16 +287,16 @@
     <Compile Include="src\apps\inventorydash userctrl\supplier details table.Designer.cs">
       <DependentUpon>supplier details table.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\apps\LoginForm12.cs">
+    <Compile Include="src\apps\dashboards\LoginForm12.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\apps\LoginForm12.Designer.cs">
+    <Compile Include="src\apps\dashboards\LoginForm12.Designer.cs">
       <DependentUpon>LoginForm12.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\apps\Supplier details addition form.cs">
+    <Compile Include="src\apps\maindash userctrl\Supplier details addition form.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\apps\Supplier details addition form.Designer.cs">
+    <Compile Include="src\apps\maindash userctrl\Supplier details addition form.Designer.cs">
       <DependentUpon>Supplier details addition form.cs</DependentUpon>
     </Compile>
     <Compile Include="src\apps\testui.cs">
@@ -286,16 +328,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="src\apps\Admin panel uctrl\Empadd.resx">
+      <DependentUpon>Empadd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\apps\Admin panel uctrl\UserSettings.resx">
       <DependentUpon>UserSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\Admin panel uctrl\UserAddition.resx">
       <DependentUpon>UserAddition.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\apps\billaddition.resx">
+    <EmbeddedResource Include="src\apps\checkoutdash userctrl\billaddition.resx">
       <DependentUpon>billaddition.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\apps\customerdetails.resx">
+    <EmbeddedResource Include="src\apps\checkoutdash userctrl\customerdetails.resx">
       <DependentUpon>customerdetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\dashboards\Admin panel.resx">
@@ -310,10 +355,16 @@
     <EmbeddedResource Include="src\apps\dashboards\maindashboard.resx">
       <DependentUpon>maindashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\apps\discountadd.resx">
+    <EmbeddedResource Include="src\apps\inventorydash userctrl\inventory view.resx">
+      <DependentUpon>inventory view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\inventorydash userctrl\productaddform.resx">
+      <DependentUpon>productaddform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\apps\maindash userctrl\discountadd.resx">
       <DependentUpon>discountadd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\apps\finalbillview.resx">
+    <EmbeddedResource Include="src\apps\checkoutdash userctrl\finalbillview.resx">
       <DependentUpon>finalbillview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\inventorydash userctrl\inventoryadd.resx">
@@ -322,10 +373,10 @@
     <EmbeddedResource Include="src\apps\inventorydash userctrl\supplier details table.resx">
       <DependentUpon>supplier details table.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\apps\LoginForm12.resx">
+    <EmbeddedResource Include="src\apps\dashboards\LoginForm12.resx">
       <DependentUpon>LoginForm12.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\apps\Supplier details addition form.resx">
+    <EmbeddedResource Include="src\apps\maindash userctrl\Supplier details addition form.resx">
       <DependentUpon>Supplier details addition form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\apps\testui.resx">
@@ -352,9 +403,7 @@
     <None Include="Resources\box.png" />
     <None Include="Resources\checklist.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\apps\maindash userctrl\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

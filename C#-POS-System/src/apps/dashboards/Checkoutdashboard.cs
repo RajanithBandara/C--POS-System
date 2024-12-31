@@ -13,10 +13,13 @@ namespace CSharp_POS_System.src.apps.dashboards
 {
     public partial class Checkoutdashboard : Form
     {
+        
         public Checkoutdashboard()
         {
             InitializeComponent();
         }
+
+        
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -62,6 +65,13 @@ namespace CSharp_POS_System.src.apps.dashboards
             finalbillview finalbillview = new finalbillview();
             panel2.Controls.Clear();
             usercontroladd.addusercontrol(finalbillview, panel2);
+        }
+
+        private void rjButton1_Click_1(object sender, EventArgs e)
+        {
+            billaddition billadd = new billaddition();
+            panel2.Controls.Clear();
+            usercontroladd.addusercontrol(billadd, panel2);
         }
     }
 }

@@ -39,14 +39,14 @@ namespace CSharp_POS_System.src.apps
             textBox1.Text = string.Empty;
             textBox2.Text = string.Empty;
             textBox3.Text = string.Empty;
-            dateTimePicker1.Value = DateTime.Now;
+            kryptonDateTimePicker1.Value = DateTime.Now;
         }
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
             string PromotionID = textBox1.Text;
             string Description = textBox2.Text;
-            DateTime ValidatePeriod = dateTimePicker1.Value;
+            DateTime ValidatePeriod = kryptonDateTimePicker1.Value;
             string ValidateProductID = textBox3.Text;
             string PromotionType = textBox4.Text;
 
