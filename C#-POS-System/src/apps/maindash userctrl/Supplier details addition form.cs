@@ -75,6 +75,11 @@ namespace C__POS_System.src.apps
             {
                 MessageBox.Show($"Error: {ex.Message}");
             }
-        }  
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
