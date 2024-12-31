@@ -59,7 +59,7 @@ namespace CSharp_POS_System.src.apps
                 {
                     conn.Open(); // Open the connection
 
-                    string query = "SELECT CustomerID, CustomerName, EmailAddress, ContactNo, PostalAddress FROM CustomerTable";
+                    string query = "SELECT * from CustomerDetailsView";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
