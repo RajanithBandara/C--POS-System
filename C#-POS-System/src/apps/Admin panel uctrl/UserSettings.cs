@@ -145,31 +145,35 @@ namespace CSharp_POS_System.src.apps.Admin_panel_uctrl
 
 
         private bool UpdateDatabase(string userId, string userName, string newPassword)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
-                    try
-                    {
-                        conn.Open();
-                        string query = "UPDATE UserTable SET UserName = @UserName, Pwd = @Password WHERE UserID = @UserID";
+                    conn.Open();
 
-                        using (SqlCommand cmd = new SqlCommand(query, conn))
-                        {
-                            cmd.Parameters.AddWithValue("@UserID", userId);
-                            cmd.Parameters.AddWithValue("@UserName", userName);
-                            cmd.Parameters.AddWithValue("@Password", newPassword);
+                    string procedureName = "UpdateUserData";
 
-                            int rowsAffected = cmd.ExecuteNonQuery();
-                            return rowsAffected > 0;
-                        }
-                    }
-                    catch (Exception ex)
+                    using (SqlCommand cmd = new SqlCommand(procedureName, conn))
                     {
-                        MessageBox.Show($"Database update error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return false;
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@UserID", userId);
+                        cmd.Parameters.AddWithValue("@UserName", userName);
+                        cmd.Parameters.AddWithValue("@Password", newPassword);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        return rowsAffected > 0;
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Database update error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
+        }
+
 
         private void rjButton4_Click(object sender, EventArgs e)
         {

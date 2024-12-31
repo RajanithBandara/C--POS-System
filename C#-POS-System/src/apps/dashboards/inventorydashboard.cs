@@ -51,5 +51,19 @@ namespace CSharp_POS_System.src.apps.dashboards
         {
 
         }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            inventory_view inventory_View = new inventory_view();
+            panel1.Controls.Clear();
+            usercontroladd.addusercontrol(inventory_View,panel1);
+        }
+
+        private void rjButton4_Click(object sender, EventArgs e)
+        {
+            productadd productaddform = new productadd();
+            panel1.Controls.Clear();
+            usercontroladd.addusercontrol(productaddform, panel1);
+        }
     }
 }

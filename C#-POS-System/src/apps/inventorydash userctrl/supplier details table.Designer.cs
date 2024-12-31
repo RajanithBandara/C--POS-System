@@ -43,9 +43,9 @@
             this.rjPanel1.GradientAngle = 90F;
             this.rjPanel1.GradientBottomColor = System.Drawing.Color.DarkGray;
             this.rjPanel1.GradientTopColor = System.Drawing.Color.DarkGray;
-            this.rjPanel1.Location = new System.Drawing.Point(14, 18);
+            this.rjPanel1.Location = new System.Drawing.Point(15, 3);
             this.rjPanel1.Name = "rjPanel1";
-            this.rjPanel1.Size = new System.Drawing.Size(1459, 822);
+            this.rjPanel1.Size = new System.Drawing.Size(1459, 969);
             this.rjPanel1.TabIndex = 0;
             // 
             // kryptonDataGridView1
@@ -58,7 +58,7 @@
             this.kryptonDataGridView1.ReadOnly = true;
             this.kryptonDataGridView1.RowHeadersWidth = 62;
             this.kryptonDataGridView1.RowTemplate.Height = 28;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(1459, 822);
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(1459, 969);
             this.kryptonDataGridView1.TabIndex = 0;
             // 
             // supplier_details_table
