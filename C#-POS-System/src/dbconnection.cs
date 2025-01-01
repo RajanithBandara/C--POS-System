@@ -1,20 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 namespace WindowsAppProject.Apps
 {
     internal class dbconnection
     {
         private static readonly Lazy<dbconnection> instance = new Lazy<dbconnection>(() => new dbconnection());
+
         public static dbconnection Instance => instance.Value;
-        
+
         public string ConnectionString { get; private set; }
+
+        // Private constructor for Singleton
         private dbconnection()
         {
-            ConnectionString = "WIll be provided in the future";
+            try
+            {
+                // Hardcoded connection string
+                ConnectionString = "Server=localhost,1433;Database=posdb;User Id=sa;Password=password123#";
+
+                // You can add environment-based connection string selection here
+                // E.g., Dev vs Production
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("Failed to initialize the database connection string.", ex);
+            }
         }
     }
-
 }
+
