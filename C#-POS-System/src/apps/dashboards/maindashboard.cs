@@ -31,5 +31,17 @@ namespace CSharp_POS_System.src.apps.dashboards
             panel1.Controls.Clear();
             usercontroladd.addusercontrol(supplieraddition, panel1);
         }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            inventorydashboard inventorydashboard = new inventorydashboard();
+            inventorydashboard.Show();
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            Checkoutdashboard checkoutdashboard = new Checkoutdashboard();
+            checkoutdashboard.Show();
+        }
     }
 }

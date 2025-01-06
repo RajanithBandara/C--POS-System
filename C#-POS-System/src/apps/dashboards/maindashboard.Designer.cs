@@ -126,6 +126,7 @@
             this.rjButton2.Text = "Checkout Dashboard";
             this.rjButton2.TextColor = System.Drawing.Color.White;
             this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // rjButton1
             // 
@@ -147,6 +148,7 @@
             this.rjButton1.Text = "Inventory Dashboard";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // maindashboard
             // 
